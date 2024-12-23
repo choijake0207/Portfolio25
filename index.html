@@ -8,28 +8,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="portfolio-profile">
+    <div class="profile">
 
         <section class="personal-section">
-            <img class="pfp">
+            <img class="pfp" src="./Assets/selfie.png">
             <div class="personal-info">
                 <h1 class="username">Jake Choi</h1>
                 <div class="bio">
                     <p>Self Taught Front End Developer // NYC & LA</p>
                 </div>
-                <div class="link-stories">
-                    <a class="story" id="github">
-                        <img src="./Assets/github-logo-fill.svg">
-                    </a>
-                    <a class="story" id="linkedin">
-                        <img src="./Assets/linkedin-logo.svg">
-                    </a>
-                    <a class="story" id="resume">
-                        <img src="./Assets/file.svg">
-                    </a>
-                </div>
             </div>
         </section>
+        
+        <menu class="link-stories">
+            <li>
+                <a class="story" id="github" target="_blank" href="https://github.com/choijake0207">
+                    <img src="./Assets/github-logo-fill.svg">
+                </a>
+                <p>GitHub</p>
+            </li>
+            <li>
+                <a class="story" id="linkedin" target="_blank" href="https://www.linkedin.com/in/jake-choi-2b94a81ba/">
+                    <img src="./Assets/linkedin-logo.svg">
+                </a>
+                <p>LinkedIn</p>
+            </li>
+            <li>
+                <a class="story" id="resume" target="_blank" href="https://docs.google.com/document/d/1FgO7xYqJaDtM8Fmd5di6eYjoY7WOn0qWXkQBujA1OIs/edit?tab=t.0">
+                    <img src="./Assets/file.svg">
+                </a>
+                <p>Resume</p>
+            </li>
+        </menu>
 
         <nav class="tabs">
             <button class="tab" id="project-tab">Projects</button>
