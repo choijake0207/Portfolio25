@@ -19,10 +19,16 @@ tabs.forEach(tab => {
         const tabType = event.target.innerText.trim()
 
         pages.forEach(page => {
-            page.classList.remove("active")
+            page.classList.remove("active-page")
         })
 
-        document.getElementById(tabType).classList.add("active")
+        tabs.forEach(tab => {
+            tab.classList.remove("active-tab")
+        })
+
+        tab.classList.add("active-tab")
+
+        document.getElementById(tabType).classList.add("active-page")
     })
 })
 
