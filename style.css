@@ -1,6 +1,6 @@
 :root {
-    --light-text: black;
-    --light-border: grey;
+    --light-primary-text: black;
+    --light-secondary-text: rgb(123, 123, 123);
     --dark-text: white; 
 }
 
@@ -41,7 +41,6 @@ body {
     align-items: center;
 }
 .link-stories {
-    border: 2px dashed orange;
     display: flex;
     list-style: none;
     gap: 40px;
@@ -70,11 +69,50 @@ body {
 /* nav bar*/
 .tabs {
     display: flex;
-    justify-content: space-evenly;
+    padding: 0;
+    border-top: 1px solid var(--light-secondary-text);
+    justify-content: center;
+    gap: 50px;
 }
 .tab {
-    font-size: 1em;
+    font-size: .85em;
     border: none;
     background: none;
     font-weight: bolder;
+    color: var(--light-secondary-text);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    position: relative
 }
+.tab::before {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    content: "";
+    top: 0;
+    left: 0;
+    transition: .2s;
+}
+.tab img {
+    height: 60%;
+    color: var(--light-secondary-text);
+}
+.active-tab {
+    color: black;
+}
+.tab.active-tab::before {
+    background: black;
+    height: 1px;
+}
+
+
+/* Pages */
+.tab-content {
+    display: none;
+}
+.active-page {
+    display: block;
+}
+
