@@ -1,4 +1,4 @@
-
+import { projects } from "./Assets/data.js"
 // Light Dark Mode
 let darkMode = true
 const toggleBTN = document.querySelector(".light-dark-toggle")
@@ -23,11 +23,7 @@ toggleBTN.addEventListener("click", () => {
 
 
 
-// Tab Content Selection //
-
-
-
-
+// Tab Selection //
 const tabs = document.querySelectorAll(".tab")
 
 const pages = document.querySelectorAll(".tab-content")
@@ -50,3 +46,16 @@ tabs.forEach(tab => {
     })
 })
 
+// Dynamic Content Generation
+const projectPage = document.getElementById("PROJECTS")
+
+for (let i = 0; i < projects.length; i++) {
+    let project = projects[i]
+    createProjectCard(project)
+}
+
+function createProjectCard(project) {
+    const card = document.createElement("li")
+    card.innerHtml = `<h1>"${project.projectName}"</h1>`
+    projectPage.appendChild(card)
+}
