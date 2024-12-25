@@ -6,34 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body dark">
+
+    <header class="top-bar">
+        <p class="name">Jake Choi</p>
+        <button class="light-dark-toggle">
+            <img class="light-dark-icon" src="./Assets/sun-bold.svg">
+        </button>
+    </header>
+
     <div class="profile">
 
         <section class="personal-section">
             <img class="pfp" src="./Assets/selfie.png">
             <div class="personal-info">
-                <h1 class="username">Jake Choi</h1>
+                <div class="username-status">
+                    <h1 class="username">Jake Choi</h1>
+                    <div class="status">
+                        <div class="status-light"></div>
+                        <p>Available For Work</p>
+                    </div>
+                </div>
                 <div class="bio">
-                    <p>Self Taught Front End Developer // NYC & LA</p>
+                    <p>I'm a self-taught front end developer and I like to build things</p>
+                    <p class="location-tag">
+                        <img src="./Assets/map-pin.svg"> New York City, NY / Los Angeles, CA
+                    </p>
                 </div>
             </div>
         </section>
-        
+
         <menu class="link-stories">
-            <li>
+            <li class="link">
                 <a class="story" id="github" target="_blank" href="https://github.com/choijake0207">
                     <img src="./Assets/github-logo-fill.svg">
                 </a>
                 <p>GitHub</p>
             </li>
-            <li>
+            <li class="link">
                 <a class="story" id="linkedin" target="_blank" href="https://www.linkedin.com/in/jake-choi-2b94a81ba/">
                     <img src="./Assets/linkedin-logo.svg">
                 </a>
                 <p>LinkedIn</p>
             </li>
-            <li>
+            <li class="link">
                 <a class="story" id="resume" target="_blank" href="https://docs.google.com/document/d/1FgO7xYqJaDtM8Fmd5di6eYjoY7WOn0qWXkQBujA1OIs/edit?tab=t.0">
                     <img src="./Assets/file.svg">
                 </a>
@@ -42,15 +62,21 @@
         </menu>
 
         <nav class="tabs">
-            <button class="tab" id="project-tab">Projects</button>
-            <button class="tab" id="skills-tab">Skills</button>
-            <button class="tab" id="extra-tab">Extra Info</button>
+            <button class="tab active-tab" id="project-tab"> 
+                <img src="./Assets/grid-four.svg"> PROJECTS
+            </button>
+            <button class="tab" id="skills-tab">
+                <img src="./Assets/toolbox.svg"> SKILLS
+            </button>
+            <button class="tab" id="extra-tab">
+                <img src="./Assets/info.svg"> INFO
+            </button>
         </nav>
 
         <section class="main-content">
-            <div class="tab-content" id="projects">Projects</div>
-            <div class="tab-content" id="skills">Skills</div>
-            <div class="tab-content" id="contact">Contact</div>
+            <div class="tab-content active-page" id="PROJECTS">Projects</div>
+            <div class="tab-content" id="SKILLS">Skills</div>
+            <div class="tab-content" id="INFO">Contact</div>
         </section>
 
     </div>
