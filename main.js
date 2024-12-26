@@ -60,8 +60,11 @@ function createProjectCard(project) {
     const card = document.createElement("li")
     card.classList.add("card", `${project.projectName}`)
     card.innerHTML = ` 
+        <div class="ss-wrap">
+            <img class="screenshot" src=${project.imageURL}>
+        </div>
         <h2 class="card-title">${project.projectName}</h2>
-        <img class="screenshot" src=${project.imageURL}>
+        <p class="card-desc"></p>
 
     `
    
