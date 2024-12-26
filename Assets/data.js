@@ -12,7 +12,7 @@ export const projects = [
         summary: "Full-stack social media application where users are able to post, like, comment on, and save media",
         extSummary: "Echo",
         liveStatus: false,
-        imageURL: "./Assets/images/Echo-demo.png",
+        imageURL: "./Assets/Echo-demo.png",
         liveLink: null,
         gitLink: "https://github.com/choijake0207/EchoV1",
     },
@@ -24,7 +24,7 @@ export const projects = [
         extStack: ["@dnd-kit"],
         summary: "A client-side personal KanBan board allowing users to create boards, customize columns, and drag-drop items.",
         liveStatus: true,
-        imageURL: "./Assets/images/TaskerDemo.png",
+        imageURL: "./Assets/TaskerDemo.png",
         liveLink: "https://choijake0207.github.io/Tasker/",
         gitLink: "https://github.com/choijake0207/Tasker",
 
@@ -36,7 +36,7 @@ export const projects = [
         extStack: ["Rest API"],
         summary: "Full-stack habit management platform allowing users to create, pause, and reset habits and duration-based goals. Users are able to view all habit data including number of resets, number of completed goals, and more.",
         liveStatus: false,
-        imageURL: "./Assets/images/HabitDemo.png",
+        imageURL: "./Assets/HabitDemo.png",
         liveLink: null,
         gitLink: "https://github.com/choijake0207/Habit.io"
     },
@@ -47,7 +47,7 @@ export const projects = [
         extStack: null,
         summary: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
         liveStatus: true,
-        imageURL: "./Assets/images/LiftDemo.png",
+        imageURL: "./Assets/LiftDemo.png",
         liveLink: null,
         gitLink: "https://github.com/choijake0207/Fit4Dummies"
     }
