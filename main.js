@@ -60,7 +60,7 @@ function createProjectCard(project) {
     const card = document.createElement("li")
     card.classList.add("card", `${project.projectName}`)
     card.innerHTML = ` 
-        <h2>${project.projectName}</h2>
+        <h2 class="card-title">${project.projectName}</h2>
         <img class="screenshot" src=${project.imageURL}>
 
     `
@@ -85,7 +85,13 @@ function handleCardEvent(event, shortSum) {
             shortSum.classList.add("ss-visible")
             break;
         case "mouseout":
-            shortSum.classList.remove("ss-visible")
+            if (!event.relatedTarget || !event.currentTarget.contains(event.relatedTarget)) {    
+                shortSum.classList.remove("ss-visible")
+                shortSum.classList.add("ss-invisible")
+                setTimeout(() => {
+                    shortSum.classList.remove("ss-invisible")
+                }, 500)
+            }
             break;
     }
 
