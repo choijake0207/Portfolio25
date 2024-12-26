@@ -59,13 +59,18 @@ for (let i = 0; i < projects.length; i++) {
 function createProjectCard(project) {
     const card = document.createElement("li")
     card.classList.add("card", `${project.projectName}`)
+    card.innerHTML = ` 
+        <h2>${project.projectName}</h2>
+        <img class="screenshot" src=${project.imageURL}>
+
+    `
    
 
-    const shortSum = document.createElement("div")
+    const shortSum = document.createElement("p")
     shortSum.classList.add("shortSum")
-    shortSum.innerHTML = `
-        <p class="shortSumText">${project.summary}</p>
-    `
+    shortSum.textContent = project.summary
+
+
     card.addEventListener("click", handleCardEvent)
     card.addEventListener("mouseover", (event) => handleCardEvent(event, shortSum))
     card.addEventListener("mouseout", (event) => handleCardEvent(event, shortSum))
