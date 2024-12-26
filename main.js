@@ -64,21 +64,23 @@ function createProjectCard(project) {
             <img class="screenshot" src=${project.imageURL}>
         </div>
         <h2 class="card-title">${project.projectName}</h2>
-        <p class="card-desc"></p>
+        <p class="card-desc">${project.cardDesc}</p>
 
     `
    
 
-    const shortSum = document.createElement("p")
-    shortSum.classList.add("shortSum")
-    shortSum.textContent = project.summary
+    const hoverWrap = document.createElement("div")
+    hoverWrap.classList.add("hover-wrap")
+    const hoverBTN = document.createElement("button")
+    hoverBTN.textContent = "View More"
+   
 
 
     card.addEventListener("click", handleCardEvent)
     card.addEventListener("mouseover", (event) => handleCardEvent(event, shortSum))
     card.addEventListener("mouseout", (event) => handleCardEvent(event, shortSum))
-
-    card.appendChild(shortSum)
+    hoverWrap.appendChild(hoverBTN)
+    card.appendChild(hoverWrap)
     projectPage.appendChild(card)
 }
 
