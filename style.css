@@ -62,9 +62,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    margin-top: 30px;
-    border: .1px dashed var(--secondary-text);
+    width: 800px;
+    margin-top: 50px;
     height: 100%;   
 }
 .profile > * {
@@ -130,8 +129,7 @@ h1 {
     gap:30px;
     margin: 0;
     border-bottom: 1px solid var(--secondary-text);
-    padding-top: 10px;
-    padding-bottom: 25px;
+  
 }
 .link {
     display: flex;
@@ -175,7 +173,7 @@ h1 {
     display: flex;
     padding: 0;
     border-top: 1px solid var(--light-secondary-text);
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .tab {
     font-size: .8em;
@@ -226,13 +224,12 @@ h1 {
 }
 .active-page {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
     margin: 0;
     gap: 5px;
     opacity: 1;
     visibility: visible;
     position: relative;
-
 }
 
 
@@ -242,6 +239,39 @@ h1 {
     padding:0;
 }
 .card {
-    background: rgb(23, 23, 23);
-    height: 300px;
+    background: rgb(14, 14, 14);
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+}
+.shortSum {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: 100;
+    margin: 0;
+}
+.shortSum.ss-visible {
+  
+    animation: ss-slide-up .5s ease forwards
+}
+@keyframes ss-slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    75% {
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
