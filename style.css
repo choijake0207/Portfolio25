@@ -108,8 +108,9 @@ h1 {
     border-radius: 50%;
     background: rgb(2, 236, 2);
 }
-
-
+.bio {
+    font-weight: 300;
+}
 .location-tag {
     display: flex;
     align-items: center;
@@ -241,64 +242,75 @@ h1 {
     gap: 7px;
 }
 .card {
-    /* background: rgb(12, 12, 12); */
     aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
-    padding: 25px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.shortSum {
+
+.hover-wrap {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(100%);
-    transition: opacity .3s ease, transform .5s ease;
-    padding: 20px;
-    box-sizing: border-box;
-    font-weight: 100;
-    margin: 0;
-    font-size: .9em;
-
-}
-
-.shortSum.ss-visible {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-    background: rgb(14, 14, 14);
-}
-.shortSum.ss-invisible {
-    transform: translateY(100%);
-    visibility: hidden;
-    opacity: 0;
-}
-.card-title {
-    font-weight: 500;
-    font-size: 1.25em;
-    align-self: flex-start;
-}
-.ss-wrap {
-    aspect-ratio: 16 / 10;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 7px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(14, 14, 14)
+    transition: .1s ease;
+}
+.hover-wrap.hover-visible {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.6);
+}
+.hover-wrap.hover-invisible {
+    transition: .1s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+.modal-button {
+    padding: 10px;
+    font-size: 1em;
+    background: none;
+    color: var(--secondary-text);
+    border-radius: 5px;
+    border: 1px solid var(--secondary-text);
+    cursor: pointer;
+    background: var(--bg)
+}
+.modal-button:hover {
+    color: var(--primary-text);
+    border: 1px solid var(--primary-text)
+}
+.card-title {
+    font-weight: 400;
+    font-size: 1.25em;
+    align-self: flex-start;
+    margin-bottom: 0px;
+}
+.ss-wrap {
+    aspect-ratio: 16 / 12;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .screenshot {
     width: 90%;
     border-radius: 5px
-
+}
+.card-desc {
+    align-self: flex-start;
+    font-size: .8em;
+    color: var(--secondary-text);
 }
