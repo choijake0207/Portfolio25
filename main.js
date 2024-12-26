@@ -46,8 +46,10 @@ tabs.forEach(tab => {
     })
 })
 
-// Dynamic Content Generation
+// Projects Page
 const projectPage = document.getElementById("PROJECTS")
+const modal = document.createElement("div")
+modal.classList.add("modal")
 
 for (let i = 0; i < projects.length; i++) {
     let project = projects[i]
@@ -56,6 +58,30 @@ for (let i = 0; i < projects.length; i++) {
 
 function createProjectCard(project) {
     const card = document.createElement("li")
-    card.innerHtml = `<h1>"${project.projectName}"</h1>`
+    card.classList.add("card", `${project.projectName}`)
+   
+
+    const shortSum = document.createElement("div")
+    shortSum.classList.add("shortSum")
+    shortSum.innerHTML = `
+        <p class="shortSumText">${project.summary}</p>
+    `
+    card.addEventListener("click", handleCardEvent)
+    card.addEventListener("mouseover", (event) => handleCardEvent(event, shortSum))
+    card.addEventListener("mouseout", (event) => handleCardEvent(event, shortSum))
+
+    card.appendChild(shortSum)
     projectPage.appendChild(card)
+}
+
+function handleCardEvent(event, shortSum) {
+    switch (event.type) {
+        case "mouseover":
+            shortSum.classList.add("ss-visible")
+            break;
+        case "mouseout":
+            shortSum.classList.remove("ss-visible")
+            break;
+    }
+
 }
