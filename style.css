@@ -116,8 +116,9 @@ h1 {
     border-radius: 50%;
     background: rgb(2, 236, 2);
 }
-.bio {
+.bio p {
     font-weight: 400;
+    margin-bottom: 5px;
 }
 .location-tag {
     display: flex;
@@ -324,4 +325,25 @@ h1 {
     align-self: flex-start;
     font-size: .8em;
     color: var(--secondary-text);
+}
+
+@media (max-width: 600px) {
+    .light-dark-icon {
+        height: 5vw;
+    }
+    .pfp {
+        height: 25vw;
+    }
+    .personal-section {
+        gap: 5vw;
+    }
+    .username {
+        font-size: 4vw;
+    }
+ 
+    #PROJECTS {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+    }
+   
 }
