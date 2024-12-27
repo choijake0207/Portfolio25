@@ -1,12 +1,13 @@
 import { projects } from "./Assets/data.js"
 // Light Dark Mode
-let darkMode = true
+const body = document.querySelector(".body")
+let darkMode = true       
+body.classList.add(darkMode ? "dark" : "light")
 const toggleBTN = document.querySelector(".light-dark-toggle")
 const toggleIcon = document.querySelector(".light-dark-icon")
-const body = document.querySelector(".body")
 
-toggleBTN.addEventListener("click", () => {
-    darkMode = !darkMode
+
+function toggleDarkMode () {
     if (!darkMode) {
         toggleIcon.src = "./Assets/moon-stars-bold.svg"
         body.classList.remove("dark")
@@ -16,9 +17,12 @@ toggleBTN.addEventListener("click", () => {
         body.classList.remove("light")
         body.classList.add("dark")
     }
-    console.log(darkMode)
-} )
+}
 
+toggleBTN.addEventListener("click", () => {
+    darkMode = !darkMode
+    toggleDarkMode()
+})
 
 
 
@@ -67,34 +71,33 @@ function createProjectCard(project) {
         <p class="card-desc">${project.cardDesc}</p>
 
     `
-   
 
     const hoverWrap = document.createElement("div")
     hoverWrap.classList.add("hover-wrap")
     const hoverBTN = document.createElement("button")
+    hoverBTN.classList.add("modal-button")
     hoverBTN.textContent = "View More"
    
-
-
     card.addEventListener("click", handleCardEvent)
-    card.addEventListener("mouseover", (event) => handleCardEvent(event, shortSum))
-    card.addEventListener("mouseout", (event) => handleCardEvent(event, shortSum))
+    card.addEventListener("mouseover", (event) => handleCardEvent(event, hoverWrap))
+    card.addEventListener("mouseout", (event) => handleCardEvent(event, hoverWrap))
+
     hoverWrap.appendChild(hoverBTN)
     card.appendChild(hoverWrap)
     projectPage.appendChild(card)
 }
 
-function handleCardEvent(event, shortSum) {
+function handleCardEvent(event, hoverWrap) {
     switch (event.type) {
         case "mouseover":
-            shortSum.classList.add("ss-visible")
+            hoverWrap.classList.add("hover-visible")
             break;
         case "mouseout":
             if (!event.relatedTarget || !event.currentTarget.contains(event.relatedTarget)) {    
-                shortSum.classList.remove("ss-visible")
-                shortSum.classList.add("ss-invisible")
+                hoverWrap.classList.remove("hover-visible")
+                hoverWrap.classList.add("hover-invisible")
                 setTimeout(() => {
-                    shortSum.classList.remove("ss-invisible")
+                    hoverWrap.classList.remove("hover-invisible")
                 }, 500)
             }
             break;
