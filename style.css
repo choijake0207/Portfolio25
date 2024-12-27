@@ -3,10 +3,18 @@
     --secondary-text: rgb(123, 123, 123);
     --bg: black;
     --card: rgb(14, 14, 14);
+    --card-borders: 1px solid rgba(255, 255, 255, 0.15);
+    --card-ss-bg: rgb(13, 13, 13);
+    --card-wrap-bg: rgba(0, 0, 0, 0.5);
+    --card-btn-bg: rgba(0, 0, 0, .5);
 }
 .body.light {
     --primary-text: black;
     --bg: white;
+    --card-borders: 1px solid rgba(0, 0, 0, 0.1);
+    --card-ss-bg: rgba(130, 130, 130, 0.078);
+    --card-wrap-bg: rgba(0, 0, 0, 0.2);
+    --card-btn-bg: rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -15,7 +23,7 @@ body {
     justify-content: center;
     font-family: "Inter";
     position: relative;
-    transition: .3s ease;
+    transition: .4s ease;
     color: var(--primary-text);
     background: var(--bg);
 
@@ -109,7 +117,7 @@ h1 {
     background: rgb(2, 236, 2);
 }
 .bio {
-    font-weight: 300;
+    font-weight: 400;
 }
 .location-tag {
     display: flex;
@@ -148,14 +156,12 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 43px;
-    height: 43px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: conic-gradient(
         #f095339c, #e6693c89, #dc274293, #cc23679c, #bc18889d, #f095339c
     );
-    transition: 1s ease;
-
 }
 .story img {
     border-radius: 50%;
@@ -168,7 +174,7 @@ h1 {
     background: conic-gradient(
         #ff8400, #ff4400, #ff0026, #ff0066, #ff00ae, #ff8400
     );
-    transition: .5s ease;
+    transition: 3s ease;
 }
 /* nav bar*/
 .tabs {
@@ -225,7 +231,7 @@ h1 {
     position: absolute;
 }
 .active-page {
-  
+    transition: .3s ease;
     opacity: 1;
     visibility: visible;
     position: relative;
@@ -246,10 +252,11 @@ h1 {
     position: relative;
     overflow: hidden;
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: var(--card-borders);
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 5px;
 }
 
 .hover-wrap {
@@ -268,7 +275,7 @@ h1 {
 .hover-wrap.hover-visible {
     opacity: 1;
     visibility: visible;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--card-wrap-bg);
 }
 .hover-wrap.hover-invisible {
     transition: .1s ease;
@@ -279,31 +286,35 @@ h1 {
     padding: 10px;
     font-size: 1em;
     background: none;
-    color: var(--secondary-text);
     border-radius: 5px;
-    border: 1px solid var(--secondary-text);
     cursor: pointer;
-    background: var(--bg)
+    color: white;
+    border: 1px solid white;
+    background: vaR(--card-btn-bg)
 }
 .modal-button:hover {
-    color: var(--primary-text);
-    border: 1px solid var(--primary-text)
+    filter: brightness(150%);
+    transition: .1s ease;
+    scale: 1.05;
 }
 .card-title {
     font-weight: 400;
     font-size: 1.25em;
     align-self: flex-start;
     margin-bottom: 0px;
+    transition: .1s ease;
 }
 .ss-wrap {
     aspect-ratio: 16 / 12;
     width: 100%;
     overflow: hidden;
     border-radius: 7px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: var(--card-borders);
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--card-ss-bg);
+    transition: .2s ease;
 }
 .screenshot {
     width: 90%;
