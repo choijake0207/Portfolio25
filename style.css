@@ -327,6 +327,47 @@ h1 {
     color: var(--secondary-text);
 }
 
+.modal-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.677);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+}
+.modal-wrap.mw-hidden {
+    display: none;
+}
+
+.modal {
+    height: 500px;
+    width: 700px;
+    background: var(--card-ss-bg);
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    animation: modal-slide .3s ease-in-out forwards;
+}
+
+
+@keyframes modal-slide {
+    0% {
+        transform: translateY(200%);
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-20%);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 @media (max-width: 600px) {
     .light-dark-icon {
         height: 5vw;
@@ -342,7 +383,7 @@ h1 {
     }
  
     #PROJECTS {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, .7fr));
         justify-content: center;
     }
    
