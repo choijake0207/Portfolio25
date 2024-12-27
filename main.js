@@ -54,6 +54,10 @@ tabs.forEach(tab => {
 const projectPage = document.getElementById("PROJECTS")
 const modal = document.createElement("div")
 modal.classList.add("modal")
+const modalWrap = document.createElement("div")
+modalWrap.classList.add("modal-wrap", "mw-hidden")
+modalWrap.appendChild(modal)
+body.appendChild(modalWrap)
 
 for (let i = 0; i < projects.length; i++) {
     let project = projects[i]
@@ -77,8 +81,7 @@ function createProjectCard(project) {
     const hoverBTN = document.createElement("button")
     hoverBTN.classList.add("modal-button")
     hoverBTN.textContent = "View More"
-   
-    card.addEventListener("click", handleCardEvent)
+    hoverBTN.addEventListener("click", toggleModal)
     card.addEventListener("mouseover", (event) => handleCardEvent(event, hoverWrap))
     card.addEventListener("mouseout", (event) => handleCardEvent(event, hoverWrap))
 
@@ -102,5 +105,11 @@ function handleCardEvent(event, hoverWrap) {
             }
             break;
     }
-
 }
+   
+function toggleModal() {
+    modalWrap.classList.remove("mw-hidden")
+    modalWrap.classList.add("mw-open")
+}
+  
+
