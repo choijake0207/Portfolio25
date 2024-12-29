@@ -73,7 +73,7 @@ export const skills = [
         logo: "./Assets/skills/HTMLVector.svg",
         type: "lang",
         use: "most"
-    }, 
+    },  
     {
         id: 2,
         name: "CSS",
