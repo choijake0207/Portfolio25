@@ -1,4 +1,4 @@
-import { projects } from "./Assets/data.js"
+import { projects, skills } from "./Assets/data.js"
 // Light Dark Mode
 const body = document.querySelector(".body")
 let darkMode = true       
@@ -105,8 +105,13 @@ const modal = document.createElement("div")
 modal.classList.add("modal")
 
 const closeModalBTN = document.createElement("button")
+
+
 closeModalBTN.textContent = "Close"
 closeModalBTN.addEventListener("click", toggleModal)
+
+
+
 modal.appendChild(closeModalBTN)
 
 
@@ -123,5 +128,39 @@ function toggleModal() {
         modalWrap.classList.add("mw-hidden")
     }
 }
-  
 
+
+
+// Skills Section
+
+const skillsPage = document.getElementById("SKILLS")
+const langContainer = document.getElementById("lang")
+const fwlibContainer = document.getElementById("fwlib")
+const toolContainer = document.getElementById("tool")
+
+for (let i = 0; i < skills.length; i++) {
+    let skill = skills[i]
+    createSkill(skill)
+    
+}
+
+function createSkill(skill) {
+    const skillBox = document.createElement("li")
+    skillBox.classList.add("skill", `${skill.name}`, `${skill.use}`)
+    skillBox.innerHTML = `
+        <img src=${skill.logo}>
+        <p>${skill.name}</p>
+    `
+    switch (skill.type) {
+        case "lang":
+            langContainer.appendChild(skillBox);
+            break;
+        case "fwlib":
+            fwlibContainer.appendChild(skillBox);
+            break;
+        case "tool":
+            toolContainer.appendChild(skillBox);
+            break;
+    }
+ 
+}
