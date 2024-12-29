@@ -63,61 +63,61 @@ export const skills = [
     {
         id: 0,
         name: "React.js",
-        logo: "",
+        logo: "./Assets/skills/ReactVector.png",
         type: "fwlib"
     },
     {
         id: 1,
         name: "HTML",
-        logo: "",
+        logo: "./Assets/skills/HTMLVector.png",
         type: "lang"
     }, 
     {
         id: 2,
         name: "CSS",
-        logo: "",
+        logo: "./Assets/skills/CSSVector.png",
         type: "lang"
     }, 
     {
         id: 3,
         name: "JavaScript",
-        logo: "",
+        logo: "./Assets/skills/JavaScriptVector.png",
         type: "lang"
     },
     {
         id: 4,
         name: "Express.js",
-        logo: "",
+        logo: "./Assets/skills/ExpressVector.png",
         type: "fwlib"
     },
     {
         id: 5,
         name: "Node.js",
-        logo: "",
+        logo: "./Assets/skills/NodeVector.png",
         type: "fwlib"
     },
     {
         id: 6,
         name: "Sequelize",
-        logo: "",
+        logo: "./Assets/skills/SequelizeVector.png",
         type: "fwlib"
     },
     {
         id: 7,
         name: "Jest",
-        logo: "",
+        logo: "./Assets/skills/JestVector.png",
         type: "fwlib"
     },
     {
         id: 8,
         name: "Git",
-        logo: "",
+        logo: "./Assets/skills/GitVector.png",
         type: "tool"
     },
     {
         id: 9,
         name: "MySQL",
-        logo: "",
+        logo: "./Assets/skills/MySQLVector.png",
         type: "tool"
     }
 
