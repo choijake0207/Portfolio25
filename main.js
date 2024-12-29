@@ -52,13 +52,6 @@ tabs.forEach(tab => {
 
 // Projects Page
 const projectPage = document.getElementById("PROJECTS")
-const modal = document.createElement("div")
-modal.classList.add("modal")
-const modalWrap = document.createElement("div")
-modalWrap.classList.add("modal-wrap", "mw-hidden")
-modalWrap.appendChild(modal)
-body.appendChild(modalWrap)
-
 for (let i = 0; i < projects.length; i++) {
     let project = projects[i]
     createProjectCard(project)
@@ -106,10 +99,29 @@ function handleCardEvent(event, hoverWrap) {
             break;
     }
 }
-   
+
+// Project Modal
+const modal = document.createElement("div")
+modal.classList.add("modal")
+
+const closeModalBTN = document.createElement("button")
+closeModalBTN.textContent = "Close"
+closeModalBTN.addEventListener("click", toggleModal)
+modal.appendChild(closeModalBTN)
+
+
+
+const modalWrap = document.createElement("div")
+modalWrap.classList.add("modal-wrap", "mw-hidden")
+modalWrap.appendChild(modal)
+body.appendChild(modalWrap)
+
 function toggleModal() {
-    modalWrap.classList.remove("mw-hidden")
-    modalWrap.classList.add("mw-open")
+    if (modalWrap.classList.contains("mw-hidden")) {
+        modalWrap.classList.remove("mw-hidden")
+    } else {
+        modalWrap.classList.add("mw-hidden")
+    }
 }
   
 
