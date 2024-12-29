@@ -63,62 +63,72 @@ export const skills = [
     {
         id: 0,
         name: "React.js",
-        logo: "./Assets/skills/ReactVector.png",
-        type: "fwlib"
+        logo: "./Assets/skills/ReactVector.svg",
+        type: "fwlib",
+        use: "most"
     },
     {
         id: 1,
         name: "HTML",
-        logo: "./Assets/skills/HTMLVector.png",
-        type: "lang"
+        logo: "./Assets/skills/HTMLVector.svg",
+        type: "lang",
+        use: "most"
     }, 
     {
         id: 2,
         name: "CSS",
-        logo: "./Assets/skills/CSSVector.png",
-        type: "lang"
+        logo: "./Assets/skills/CSSVector.svg",
+        type: "lang",
+        use: "most"
     }, 
     {
         id: 3,
         name: "JavaScript",
-        logo: "./Assets/skills/JavaScriptVector.png",
-        type: "lang"
+        logo: "./Assets/skills/JavaScriptVector.svg",
+        type: "lang",
+        use: "most"
     },
     {
         id: 4,
         name: "Express.js",
-        logo: "./Assets/skills/ExpressVector.png",
-        type: "fwlib"
+        logo: "./Assets/skills/ExpressVector.svg",
+        type: "fwlib",
+        use: "moderate"
     },
     {
         id: 5,
         name: "Node.js",
-        logo: "./Assets/skills/NodeVector.png",
-        type: "fwlib"
+        logo: "./Assets/skills/NodeVector.svg",
+        type: "fwlib",
+        use: "moderate"
     },
     {
         id: 6,
         name: "Sequelize",
-        logo: "./Assets/skills/SequelizeVector.png",
-        type: "fwlib"
+        logo: "./Assets/skills/SequelizeVector.svg",
+        type: "fwlib",
+        use: "moderate"
     },
     {
         id: 7,
         name: "Jest",
-        logo: "./Assets/skills/JestVector.png",
-        type: "fwlib"
+        logo: "./Assets/skills/JestVector.svg",
+        type: "fwlib",
+        use: "least"
     },
     {
         id: 8,
         name: "Git",
-        logo: "./Assets/skills/GitVector.png",
-        type: "tool"
+        logo: "./Assets/skills/GitVector.svg",
+        type: "tool",
+        use: "most"
     },
     {
         id: 9,
         name: "MySQL",
-        logo: "./Assets/skills/MySQLVector.png",
-        type: "tool"
+        logo: "./Assets/skills/MySQLVector.svg",
+        type: "tool",
+        use: "moderate"
     }
 
 
