@@ -7,6 +7,7 @@
     --card-ss-bg: rgb(13, 13, 13);
     --card-wrap-bg: rgba(0, 0, 0, 0.5);
     --card-btn-bg: rgba(0, 0, 0, .5);
+    --modal-bg: rgb(13, 13, 13)
 }
 .body.light {
     --primary-text: black;
@@ -15,6 +16,7 @@
     --card-ss-bg: rgba(130, 130, 130, 0.078);
     --card-wrap-bg: rgba(0, 0, 0, 0.2);
     --card-btn-bg: rgba(0, 0, 0, 0.5);
+    --modal-bg: rgb(234, 234, 234);
 }
 
 .body{
@@ -45,13 +47,14 @@ h1 {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    z-index: -10;
 }
 
 .star {
     position: absolute;
     width: 2px;
     height: 2px;
-    background: white; 
+    background: vaR(--primary-text); 
     border-radius: 50%; 
     animation: float 5s linear infinite;
     opacity: 0.8;
@@ -67,19 +70,7 @@ h1 {
 .star:nth-child(9) { top: 10%; left: 90%; animation-delay: 4s; }
 .star:nth-child(10) { top: 60%; left: 5%; animation-delay: 4.5s; }
 
-@keyframes float {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-20px); 
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+
 /* Header */
 .top-bar {
     position: absolute;
@@ -156,6 +147,7 @@ h1 {
     width: 10px;
     border-radius: 50%;
     background: rgb(2, 236, 2);
+    animation: status-glow 1.5s infinite 
 }
 .bio p {
     font-weight: 400;
@@ -379,7 +371,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .3s ease;
 }
 .modal-wrap.mw-hidden {
     display: none;
@@ -388,11 +379,11 @@ h1 {
 .modal {
     height: 500px;
     width: 700px;
-    background: var(--card-ss-bg);
+    background: var(--modal-bg);
     transform: scale(0);
     opacity: 0;
     visibility: hidden;
-    animation: modal-pop .3s ease-in-out forwards;
+    animation: modal-pop .2s ease-in-out forwards;
 }
 
 
@@ -406,6 +397,26 @@ h1 {
         transform: scale(1) translateY(-20%);
         visibility: visible;
         opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@keyframes status-glow {
+    50% {
+        opacity: .3;
     }
 }
 
