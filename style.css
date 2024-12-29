@@ -17,7 +17,7 @@
     --card-btn-bg: rgba(0, 0, 0, 0.5);
 }
 
-body {
+.body{
     margin: 0;
     display: flex;
     justify-content: center;
@@ -38,7 +38,48 @@ h1 {
     filter: invert(1);
     transition: .3s ease;
 }
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
 
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white; 
+    border-radius: 50%; 
+    animation: float 5s linear infinite;
+    opacity: 0.8;
+  }
+.star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.star:nth-child(2) { top: 30%; left: 50%; animation-delay: 0.5s; }
+.star:nth-child(3) { top: 50%; left: 70%; animation-delay: 1s; }
+.star:nth-child(4) { top: 80%; left: 30%; animation-delay: 1.5s; }
+.star:nth-child(5) { top: 90%; left: 60%; animation-delay: 2s; }
+.star:nth-child(6) { top: 20%; left: 80%; animation-delay: 2.5s; }
+.star:nth-child(7) { top: 40%; left: 10%; animation-delay: 3s; }
+.star:nth-child(8) { top: 70%; left: 40%; animation-delay: 3.5s; }
+.star:nth-child(9) { top: 10%; left: 90%; animation-delay: 4s; }
+.star:nth-child(10) { top: 60%; left: 5%; animation-delay: 4.5s; }
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px); 
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /* Header */
 .top-bar {
     position: absolute;
@@ -348,21 +389,21 @@ h1 {
     height: 500px;
     width: 700px;
     background: var(--card-ss-bg);
-    transform: translateY(100%);
+    transform: scale(0);
     opacity: 0;
     visibility: hidden;
-    animation: modal-slide .3s ease-in-out forwards;
+    animation: modal-pop .3s ease-in-out forwards;
 }
 
 
-@keyframes modal-slide {
+@keyframes modal-pop {
     0% {
-        transform: translateY(200%);
+        transform: scale(0);
         visibility: hidden;
         opacity: 0;
     }
     100% {
-        transform: translateY(-20%);
+        transform: scale(1) translateY(-20%);
         visibility: visible;
         opacity: 1;
     }
