@@ -576,7 +576,7 @@ footer {
         padding-left: 20px;
     }
     .skill-list {
-        grid-template-columns: repeat(auto-fit, minmax(50px, 80px)); /* Smaller columns */
+        grid-template-columns: repeat(auto-fit, minmax(50px, 80px));
     }
     .skill {
         width: 100%;
@@ -587,6 +587,9 @@ footer {
 }
 
 @media (max-width: 450px) {
+    .light-dark-toggle, .light-dark-icon {
+        display: none;
+    }
     .personal-section {
         flex-direction: column;
     }
