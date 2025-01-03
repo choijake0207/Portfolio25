@@ -490,6 +490,11 @@ h1 {
 
 }
 
+/* INFO PAge */
+#INFO {
+    padding: 25px;
+}
+
 
 
 footer {
@@ -589,7 +594,7 @@ footer {
 
 @media (max-width: 450px) {
     .status, .location-tag {
-        font-weight: 500;
+        font-weight: 700;
     }
     .light-dark-toggle, .light-dark-icon {
         display: none;
