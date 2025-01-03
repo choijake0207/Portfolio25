@@ -32,9 +32,9 @@ const tabs = document.querySelectorAll(".tab")
 
 const pages = document.querySelectorAll(".tab-content")
 tabs.forEach(tab => {
-    tab.addEventListener("click", event => {
+    tab.addEventListener("click", () => {
 
-        const tabType = event.target.innerText.trim()
+        const tabType = tab.dataset.tab
 
         pages.forEach(page => {
             page.classList.remove("active-page")
