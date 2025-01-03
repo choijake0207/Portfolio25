@@ -404,6 +404,24 @@ h1 {
     visibility: hidden;
     animation: modal-pop .3s ease-in-out forwards;
 }
+.tech-list {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+.tech-list > * {
+    padding: 5px;
+    font-size: .8em;
+}
+.tech-item {
+    border: 1px solid rgb(0, 136, 255);
+    color: rgb(0, 136, 255);
+    border-radius: 5px;
+}
+.ext-item {
+    border: 1px solid white;
+    border-radius: 5px;
+}
 
 /* SKILLS poage  */
 #SKILLS {
