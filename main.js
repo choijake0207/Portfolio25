@@ -106,13 +106,15 @@ modal.classList.add("modal")
 
 
 
-const closeModalBTN = document.createElement("button")
-closeModalBTN.textContent = "Close"
-closeModalBTN.addEventListener("click", toggleModal)
-modal.appendChild(closeModalBTN)
+
 
 
 function populateModal(id) {
+    modal.innerHTML = ""
+    const closeModalBTN = document.createElement("button")
+    closeModalBTN.textContent = "Close"
+    closeModalBTN.addEventListener("click", toggleModal)
+    modal.appendChild(closeModalBTN)
     const project = projects[id]
     const imgCarousel = document.createElement("ul")
     for (let i = 0; i < project.extraIMG.length; i++) {
