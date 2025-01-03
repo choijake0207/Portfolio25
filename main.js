@@ -111,19 +111,37 @@ modal.classList.add("modal")
 
 function populateModal(id) {
     modal.innerHTML = ""
+
     const closeModalBTN = document.createElement("button")
+    closeModalBTN.classList.add("modal-close-btn")
     closeModalBTN.textContent = "Close"
     closeModalBTN.addEventListener("click", toggleModal)
     modal.appendChild(closeModalBTN)
+
     const project = projects[id]
     const imgCarousel = document.createElement("ul")
+    imgCarousel.classList.add("carousel")
     for (let i = 0; i < project.extraIMG.length; i++) {
         const img = document.createElement("li")
         img.textContent = project.extraIMG[i]
         imgCarousel.appendChild(img)
     }
-    
     modal.appendChild(imgCarousel)
+
+    const techList = document.createElement("ul")
+    techList.classList.add("tech-list")
+    for(let j = 0; j < project.stack.length; j++) {
+        const techItem = document.createElement("li")
+        techItem.textContent = project.stack[j]
+        techList.appendChild(techItem)
+    }
+    for (let j = 0;  j < project.extStack.length; j++) {
+        const extItem = document.createElement("li")
+        extItem.textContent = project.extStack[j]
+        techList.appendChild(extItem)
+    }
+    modal.appendChild(techList)
+
 }
 
 
