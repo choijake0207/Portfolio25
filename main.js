@@ -74,7 +74,7 @@ function createProjectCard(project) {
     const hoverBTN = document.createElement("button")
     hoverBTN.classList.add("modal-button")
     hoverBTN.textContent = "View More"
-    hoverBTN.addEventListener("click", toggleModal)
+    hoverBTN.addEventListener("click", () => toggleModal(project.id))
     card.addEventListener("mouseover", (event) => handleCardEvent(event, hoverWrap))
     card.addEventListener("mouseout", (event) => handleCardEvent(event, hoverWrap))
 
@@ -104,16 +104,25 @@ function handleCardEvent(event, hoverWrap) {
 const modal = document.createElement("div")
 modal.classList.add("modal")
 
+
+
 const closeModalBTN = document.createElement("button")
-
-
 closeModalBTN.textContent = "Close"
 closeModalBTN.addEventListener("click", toggleModal)
-
-
-
 modal.appendChild(closeModalBTN)
 
+
+function populateModal(id) {
+    const project = projects[id]
+    const imgCarousel = document.createElement("ul")
+    for (let i = 0; i < project.extraIMG.length; i++) {
+        const img = document.createElement("li")
+        img.textContent = project.extraIMG[i]
+        imgCarousel.appendChild(img)
+    }
+    
+    modal.appendChild(imgCarousel)
+}
 
 
 const modalWrap = document.createElement("div")
@@ -121,13 +130,17 @@ modalWrap.classList.add("modal-wrap", "mw-hidden")
 modalWrap.appendChild(modal)
 body.appendChild(modalWrap)
 
-function toggleModal() {
+function toggleModal(id) {
     if (modalWrap.classList.contains("mw-hidden")) {
         modalWrap.classList.remove("mw-hidden")
+        populateModal(id)
     } else {
         modalWrap.classList.add("mw-hidden")
     }
 }
+
+
+
 
 
 
