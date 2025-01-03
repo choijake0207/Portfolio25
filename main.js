@@ -119,6 +119,7 @@ function populateModal(id) {
     modal.appendChild(closeModalBTN)
 
     const project = projects[id]
+
     const imgCarousel = document.createElement("ul")
     imgCarousel.classList.add("carousel")
     for (let i = 0; i < project.extraIMG.length; i++) {
@@ -128,16 +129,29 @@ function populateModal(id) {
     }
     modal.appendChild(imgCarousel)
 
+    const modalHeader = document.createElement("div")
+    modalHeader.classList.add("modal-header")
+    modalHeader.innerHTML = `
+        <h2>${project.projectName}</h2>
+        <div class="links-container">
+            <a class="modal-gh-link" href="${project.gitLink}" target="_blank">View Code</a>
+            <a class="modal-live-link" href="${project.liveLink}">${project.liveLink === null ? "Demo Not Ready" : "View Demo"}</a>
+        </div>
+    `
+    modal.appendChild(modalHeader)
+
     const techList = document.createElement("ul")
     techList.classList.add("tech-list")
     for(let j = 0; j < project.stack.length; j++) {
         const techItem = document.createElement("li")
         techItem.textContent = project.stack[j]
+        techItem.classList.add("tech-item")
         techList.appendChild(techItem)
     }
     for (let j = 0;  j < project.extStack.length; j++) {
         const extItem = document.createElement("li")
         extItem.textContent = project.extStack[j]
+        extItem.classList.add("ext-item")
         techList.appendChild(extItem)
     }
     modal.appendChild(techList)
