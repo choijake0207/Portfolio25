@@ -577,7 +577,6 @@ footer {
     }
     .skill-list {
         grid-template-columns: repeat(auto-fit, minmax(50px, 90px));
-        border: 1px solid red;
         padding-right: 15px;
     }
     .skill {
