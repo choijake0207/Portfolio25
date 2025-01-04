@@ -103,6 +103,9 @@ function handleCardEvent(event, hoverWrap) {
 // Project Modal
 const modal = document.createElement("div")
 modal.classList.add("modal")
+const modalShader = document.createElement("div")
+modalShader.classList.add("modal-shader")
+modal.appendChild(modalShader)
 
 
 
@@ -114,7 +117,7 @@ function populateModal(id) {
 
     const closeModalBTN = document.createElement("button")
     closeModalBTN.classList.add("modal-close-btn")
-    closeModalBTN.textContent = "Close"
+    closeModalBTN.innerHTML = `<img src="./Assets/icons/x-circle.svg"/>`
     closeModalBTN.addEventListener("click", toggleModal)
     modal.appendChild(closeModalBTN)
 
@@ -135,7 +138,7 @@ function populateModal(id) {
         <h2>${project.projectName}</h2>
         <div class="links-container">
             <a class="modal-gh-link" href="${project.gitLink}" target="_blank">View Code</a>
-            <a class="modal-live-link" href="${project.liveLink}">${project.liveLink === null ? "Demo Not Ready" : "View Demo"}</a>
+            <a class="modal-live-link ${project.liveLink === null ? "null-link" : ""}" target="_blank" href="${project.liveLink}">${project.liveLink === null ? "Coming Soon" : "View Demo"}</a>
         </div>
     `
     modal.appendChild(modalHeader)
@@ -156,6 +159,10 @@ function populateModal(id) {
     }
     modal.appendChild(techList)
 
+    const extraInfo = document.createElement("p")
+    extraInfo.classList.add("modal-extra-info")
+    extraInfo.textContent = project.extraInfo
+    modal.appendChild(extraInfo)
 }
 
 
@@ -167,8 +174,10 @@ body.appendChild(modalWrap)
 function toggleModal(id) {
     if (modalWrap.classList.contains("mw-hidden")) {
         modalWrap.classList.remove("mw-hidden")
+        body.classList.add("no-scroll")
         populateModal(id)
     } else {
+        body.classList.remove("no-scroll")
         modalWrap.classList.add("mw-hidden")
     }
 }
