@@ -14,6 +14,8 @@ export const projects = [
         extSummary: "Echo",
         liveStatus: false,
         imageURL: "./Assets/EchoDemo.png",
+        extraIMG: ["1", "2", "3"],
+        extraInfo: "Echo was my first attempt at creating a full-stack project and was by far the most educational experience on this list. Building Echo was the equivalent of jumping into the deep end and posed many daunting challenges I had no experience with. However, in retrospect, Echo was the perfect project to really help me know what I didn't know. I had never used JSON web tokens, managed large-scale states, or had even tried to set up a back end with databases and route handling. Nevertheless through trial and error, online resources, and lots of refractoring, I was able to gain experience with new tools and frameworks.",
         liveLink: null,
         gitLink: "https://github.com/choijake0207/EchoV1",
     },
@@ -27,6 +29,7 @@ export const projects = [
         summary: "A client-side personal KanBan board allowing users to create boards, customize columns, and drag-drop items.",
         liveStatus: true,
         imageURL: "./Assets/TaskerDemo.png",
+        extraIMG: ["1", "2", "3"],
         liveLink: "https://choijake0207.github.io/Tasker/",
         gitLink: "https://github.com/choijake0207/Tasker",
 
@@ -40,6 +43,7 @@ export const projects = [
         summary: "Full-stack habit management platform allowing users to create, pause, and reset habits and duration-based goals. Users are able to view all habit data including number of resets, number of completed goals, and more.",
         liveStatus: false,
         imageURL: "./Assets/HabitDemo.png",
+        extraIMG: ["1", "2", "3"],
         liveLink: null,
         gitLink: "https://github.com/choijake0207/Habit.io"
     },
@@ -52,6 +56,7 @@ export const projects = [
         summary: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
         liveStatus: true,
         imageURL: "./Assets/LiftDemo.png",
+        extraIMG: ["1", "2", "3"],
         liveLink: null,
         gitLink: "https://github.com/choijake0207/Fit4Dummies"
     }
