@@ -9,11 +9,11 @@ const toggleIcon = document.querySelector(".light-dark-icon")
 
 function toggleDarkMode () {
     if (!darkMode) {
-        toggleIcon.src = "./Assets/moon-stars-bold.svg"
+        toggleIcon.src = "./Assets/icons/moon-stars-bold.svg"
         body.classList.remove("dark")
         body.classList.add("light")
     } else {
-        toggleIcon.src = "./Assets/sun-bold.svg"
+        toggleIcon.src = "./Assets/icons/sun-bold.svg"
         body.classList.remove("light")
         body.classList.add("dark")
     }
@@ -170,6 +170,7 @@ const modalWrap = document.createElement("div")
 modalWrap.classList.add("modal-wrap", "mw-hidden")
 modalWrap.appendChild(modal)
 body.appendChild(modalWrap)
+
 
 function toggleModal(id) {
     if (modalWrap.classList.contains("mw-hidden")) {
