@@ -7,7 +7,8 @@
     --card-ss-bg: rgb(13, 13, 13);
     --card-wrap-bg: rgba(0, 0, 0, 0.5);
     --card-btn-bg: rgba(0, 0, 0, .5);
-    --modal-bg: rgb(10, 10, 10)
+    --modal-bg: rgb(17, 17, 17);
+    --modal-border: rgba(255, 255, 255, 0.224);
 }
 .body.light {
     --primary-text: black;
@@ -17,6 +18,7 @@
     --card-wrap-bg: rgba(0, 0, 0, 0.2);
     --card-btn-bg: rgba(0, 0, 0, 0.5);
     --modal-bg: rgb(234, 234, 234);
+    --modal-border: rgba(0, 0, 0, 0.3);
 }
 
 body{
@@ -36,6 +38,9 @@ body{
 }
 .no-scroll {
     overflow: hidden;
+}
+.no-scroll .profile {
+    filter: blur(2px)
 }
 h1 {
     margin: 0;
@@ -386,14 +391,15 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
     background: rgba(0, 0, 0, 0.677);
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
+    z-index: 100;
 }
+
 .modal-wrap.mw-hidden {
     display: none;
 }
@@ -402,19 +408,22 @@ h1 {
     height: 500px;
     width: 650px;
     background: var(--modal-bg);
-    transform: scale(0);
-    opacity: 0;
-    visibility: hidden;
-    animation: modal-pop .3s ease-in-out forwards;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     gap: 15px;
     flex-direction: column;
     overflow-y: scroll;
-    padding: 45px;
+    padding: 35px;
     box-sizing: border-box;
     position: relative;
+    z-index: 10;
+    filter: blur(0);
+    animation: modal-pop .3s ease-in-out forwards;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
 }
+
 .modal::-webkit-scrollbar {
     display: none;
 }
@@ -501,8 +510,12 @@ h1 {
 }
 .modal-extra-info {
     font-size: .9em;
-    color: var(--secondary-text)
+    color: var(--secondary-text);
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
 }
+
 
 /* SKILLS poage  */
 #SKILLS {
@@ -617,7 +630,7 @@ footer {
     padding: 50px;
     color: rgb(136, 136, 136);
     font-size: .9em;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 
