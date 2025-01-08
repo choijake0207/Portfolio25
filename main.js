@@ -101,11 +101,16 @@ function handleCardEvent(event, hoverWrap) {
 }
 
 // Project Modal
+
+
 const modal = document.createElement("div")
 modal.classList.add("modal")
-const modalShader = document.createElement("div")
-modalShader.classList.add("modal-shader")
-modal.appendChild(modalShader)
+
+
+const modalWrap = document.createElement("div")
+modalWrap.classList.add("modal-wrap", "mw-hidden")
+modalWrap.appendChild(modal)
+body.appendChild(modalWrap)
 
 
 
@@ -113,7 +118,7 @@ modal.appendChild(modalShader)
 
 
 function populateModal(id) {
-    modal.innerHTML = ""
+    modal.innerHTML = ``
 
     const closeModalBTN = document.createElement("button")
     closeModalBTN.classList.add("modal-close-btn")
@@ -123,14 +128,34 @@ function populateModal(id) {
 
     const project = projects[id]
 
-    const imgCarousel = document.createElement("ul")
-    imgCarousel.classList.add("carousel")
+    const carouselContainer = document.createElement("div")
+    carouselContainer.classList.add("carousel-container")
+    const prevBtn = document.createElement("button")
+    prevBtn.innerHTML = `<img src="./Assets/icons/prev.svg"/>`
+    prevBtn.classList.add("carousel-btn-prev")
+    const nextBtn = document.createElement("button")
+    nextBtn.innerHTML = `<img src="./Assets/icons/next.svg"/>`
+    nextBtn.classList.add("carousel-btn-next")
+    const carousel = document.createElement("ul")
+    carousel.classList.add("carousel")
+    carouselContainer.append(prevBtn, carousel, nextBtn)
+    
+
     for (let i = 0; i < project.extraIMG.length; i++) {
-        const img = document.createElement("li")
-        img.textContent = project.extraIMG[i]
-        imgCarousel.appendChild(img)
+        const source = project.extraIMG[i]
+        const img = document.createElement("img")
+        img.classList.add("carousel-image")
+        img.src = source
+        carousel.appendChild(img)
     }
-    modal.appendChild(imgCarousel)
+    modal.appendChild(carouselContainer)
+
+    let currentImg = 0;
+    nextBtn.addEventListener("click", () => {
+        currentImg = (currentImg + 1) % 3
+        carousel.style.transform = `translateX(-${currentImg * 450}px)`
+    })
+
 
     const modalHeader = document.createElement("div")
     modalHeader.classList.add("modal-header")
@@ -151,11 +176,13 @@ function populateModal(id) {
         techItem.classList.add("tech-item")
         techList.appendChild(techItem)
     }
-    for (let j = 0;  j < project.extStack.length; j++) {
-        const extItem = document.createElement("li")
-        extItem.textContent = project.extStack[j]
-        extItem.classList.add("ext-item")
-        techList.appendChild(extItem)
+    if (project.extStack) {
+        for (let j = 0;  j < project.extStack.length; j++) {
+            const extItem = document.createElement("li")
+            extItem.textContent = project.extStack[j]
+            extItem.classList.add("ext-item")
+            techList.appendChild(extItem)
+        }
     }
     modal.appendChild(techList)
 
@@ -166,10 +193,6 @@ function populateModal(id) {
 }
 
 
-const modalWrap = document.createElement("div")
-modalWrap.classList.add("modal-wrap", "mw-hidden")
-modalWrap.appendChild(modal)
-body.appendChild(modalWrap)
 
 
 function toggleModal(id) {
