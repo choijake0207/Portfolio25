@@ -368,7 +368,7 @@ h1 {
     transition: .1s ease;
 }
 .ss-wrap {
-    aspect-ratio: 16 / 12;
+    aspect-ratio: 16 / 10;
     width: 100%;
     overflow: hidden;
     border-radius: 7px;
@@ -407,8 +407,8 @@ h1 {
 }
 
 .modal {
-    height: 600px;
-    width: 700px;
+    height: 550px;
+    width: 600px;
     background: var(--modal-bg);
     border-radius: 10px;
     display: flex;
@@ -442,23 +442,27 @@ h1 {
     opacity: 1;
     transition: .2s;
 }
+
 .carousel-container {
     display: flex;
     align-self: center;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
+    border-radius: 10px;
+    width: 450px;
 
 }
 .carousel {
     margin: 0;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/8;
     width: 450px;
     align-self: center;
     padding: 0;
     display: flex;
     transition: .5s ease-in-out;
     z-index: 1;
+    
 }
 .carousel-btn-next, .carousel-btn-prev {
     position: absolute;
@@ -466,17 +470,22 @@ h1 {
     background: none;
     border: none;
     opacity: 50%;
+    transition: .1s;
+}
+.carousel-btn-next:hover, .carousel-btn-prev:hover {
+    opacity: 100%;
+    cursor: pointer;
 }
 .carousel-btn-next img, .carousel-btn-prev img {
-    height: 50px;
+    height: 40px;
 }
 .carousel-btn-next {
-    top: 40%;
-    right: 0px;
+    top: 25%;
+    right: 20px;
 }
 .carousel-btn-prev {
-    top: 40%;
-    left: 0px;
+    top: 25%;
+    left: 20px;
 }
 .carousel img {
     border-radius: 5px;
@@ -503,15 +512,17 @@ h1 {
     text-decoration: none;
     padding: 7px;
     border-radius: 5px;
+    border: 2px solid var(--primary-text);
     color: var(--primary-text);
-    border: 1px solid var(--primary-text)
+    font-weight: 500;
 }
 .modal-live-link {
     text-decoration: none;
-    border: 1px solid rgb(0, 136, 255);
+    border: 2px solid rgb(0, 136, 255);
     padding: 7px;
     border-radius: 5px;
     color: rgb(0, 136, 255);
+    font-weight: 500;
 }
 .null-link {
     border: 1px solid var(--secondary-text);
@@ -677,7 +688,7 @@ footer {
         opacity: 0;
     }
     100% {
-        transform: scale(1) translateY(-10%);
+        transform: scale(1) translateY(0%);
         visibility: visible;
         opacity: 1;
     }
