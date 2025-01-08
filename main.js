@@ -128,6 +128,8 @@ function populateModal(id) {
 
     const project = projects[id]
 
+    const carouselWrap = document.createElement("div")
+    carouselWrap.classList.add("carousel-wrap")
     const carouselContainer = document.createElement("div")
     carouselContainer.classList.add("carousel-container")
     const prevBtn = document.createElement("button")
@@ -138,7 +140,8 @@ function populateModal(id) {
     nextBtn.classList.add("carousel-btn-next")
     const carousel = document.createElement("ul")
     carousel.classList.add("carousel")
-    carouselContainer.append(prevBtn, carousel, nextBtn)
+    carouselWrap.append(prevBtn, carouselContainer, nextBtn)
+    carouselContainer.appendChild(carousel)
     
 
     for (let i = 0; i < project.extraIMG.length; i++) {
@@ -148,7 +151,7 @@ function populateModal(id) {
         img.src = source
         carousel.appendChild(img)
     }
-    modal.appendChild(carouselContainer)
+    modal.appendChild(carouselWrap)
 
     let currentImg = 0;
     nextBtn.addEventListener("click", () => {
