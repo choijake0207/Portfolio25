@@ -27,8 +27,8 @@ export const projects = [
         cardDesc: "Guide for weight lifting",
         summary: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
         liveStatus: true,
-        imageURL: "./Assets/LiftDemo.png",
-        extraIMG: ["./Assets/LiftDemo.png","./Assets/projects/Lift1.png", "./Assets/projects/Lift2.png"],
+        imageURL: "./Assets/projects/Lift1.png",
+        extraIMG: ["./Assets/projects/Lift1.png","./Assets/projects/Lift1.png", "./Assets/projects/Lift2.png"],
         extraInfo: "Lifting-4-Dummies was solely just a passion project and an attempt to add fun interactivity to a purely client-side app. The clickable SVG paths were made via InkScape. I initially intended to use APIs for data fetching but couldn't find a reliable one and alternatively used a JSON datasheet created by GitHub user @OllieJennings.",
         liveLink: "https://choijake0207.github.io/Fit4Dummies/",
         gitLink: "https://github.com/choijake0207/Fit4Dummies"
@@ -42,8 +42,8 @@ export const projects = [
         cardDesc: "Personal kanban board",
         summary: "A client-side personal KanBan board allowing users to create boards, customize columns, and drag-drop items.",
         liveStatus: true,
-        imageURL: "./Assets/TaskerDemo.png",
-        extraIMG: ["1", "2", "3"],
+        imageURL: "./Assets/projects/Tasker3.png",
+        extraIMG: ["./Assets/projects/Tasker3.png", "./Assets/projects/Tasker2.png", "./Assets/projects/Tasker1.png"],
         liveLink: "https://choijake0207.github.io/Tasker/",
         gitLink: "https://github.com/choijake0207/Tasker",
 
@@ -56,8 +56,8 @@ export const projects = [
         cardDesc: "Habit management app",
         summary: "Full-stack habit management platform allowing users to create, pause, and reset habits and duration-based goals. Users are able to view all habit data including number of resets, number of completed goals, and more.",
         liveStatus: false,
-        imageURL: "./Assets/HabitDemo.png",
-        extraIMG: ["1", "2", "3"],
+        imageURL: "./Assets/projects/Habit1.png",
+        extraIMG: ["./Assets/projects/Habit1.png", "./Assets/projects/Habit2.png", "./Assets/projects/Habit3.png"],
         liveLink: null,
         gitLink: "https://github.com/choijake0207/Habit.io"
     }
