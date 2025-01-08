@@ -154,9 +154,13 @@ function populateModal(id) {
     modal.appendChild(carouselWrap)
 
     let currentImg = 0;
+    let images = carousel.querySelectorAll(".carousel-image")
     nextBtn.addEventListener("click", () => {
         currentImg = (currentImg + 1) % 3
-        carousel.style.transform = `translateX(-${currentImg * 450}px)`
+            const width = images[0].clientWidth
+            carousel.style.transform = `translateX(-${currentImg * width}px)`
+
+        
     })
 
 
