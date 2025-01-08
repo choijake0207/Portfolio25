@@ -15,13 +15,27 @@ export const projects = [
         liveStatus: false,
         imageURL: "./Assets/EchoDemo.png",
         extraIMG: ["1", "2", "3"],
-        extraInfo: "Echo was my first attempt at creating a full-stack project and was by far the most educational experience on this list. Building Echo was the equivalent of jumping into the deep end and posed many daunting challenges I had no experience with. However, in retrospect, Echo was the perfect project to really help me know what I didn't know. I had never used JSON web tokens, managed large-scale states, or had even tried to set up a back end with databases and route handling. Nevertheless through trial and error, online resources, and lots of refractoring, I was able to gain experience with new tools and frameworks.",
+        extraInfo: "Echo was my first attempt at a full-stack project and was by far the most educational project. It was a jump into the deep end and posed many challenges I had no experience with. But, in retrospect, it was the perfect project to help me see what I didn't know. I had never used JSON web tokens, large-scale states, or even tried to set up a back-end with databases and route handling. However, through trial and error, online resources, and lots of refractoring, I was able to gain experience with new tools and frameworks.",
         liveLink: null,
         gitLink: "https://github.com/choijake0207/EchoV1",
     },
-    
     {
         id: 1,
+        projectName: "Lift-4-Dummies",
+        stack: ["HTML", "CSS", "JavaScript"],
+        extStack: null,
+        cardDesc: "Guide for weight lifting",
+        summary: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
+        liveStatus: true,
+        imageURL: "./Assets/LiftDemo.png",
+        extraIMG: ["./Assets/LiftDemo.png","./Assets/projects/Lift1.png", "./Assets/projects/Lift2.png"],
+        extraInfo: "Lifting-4-Dummies was solely just a passion project and an attempt to add fun interactivity to a purely client-side app. The clickable SVG paths were made via InkScape. I initially intended to use APIs for data fetching but couldn't find a reliable one and alternatively used a JSON datasheet created by GitHub user @OllieJennings.",
+        liveLink: "https://choijake0207.github.io/Fit4Dummies/",
+        gitLink: "https://github.com/choijake0207/Fit4Dummies"
+    },
+    
+    {
+        id: 2,
         projectName: "Tasker",
         stack: ["HTML", "CSS", "JavaScript"],
         extStack: ["@dnd-kit"],
@@ -35,7 +49,7 @@ export const projects = [
 
     },
     {
-        id: 2,
+        id: 3,
         projectName: "Habit.io",
         stack: ["React.js", "Express.js", "Node.js", "MySQL", "CSS"],
         extStack: ["Rest API"],
@@ -46,19 +60,6 @@ export const projects = [
         extraIMG: ["1", "2", "3"],
         liveLink: null,
         gitLink: "https://github.com/choijake0207/Habit.io"
-    },
-    {
-        id: 3,
-        projectName: "Lift-4-Dummies",
-        stack: ["HTML", "CSS", "JavaScript"],
-        extStack: null,
-        cardDesc: "Guide for weight lifting",
-        summary: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
-        liveStatus: true,
-        imageURL: "./Assets/LiftDemo.png",
-        extraIMG: ["1", "2", "3"],
-        liveLink: null,
-        gitLink: "https://github.com/choijake0207/Fit4Dummies"
     }
    
 ]
