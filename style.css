@@ -1,6 +1,6 @@
 :root {
     --primary-text: white;
-    --secondary-text: rgb(123, 123, 123);
+    --secondary-text: rgb(118, 118, 118);
     --bg: black;
     --card: rgb(14, 14, 14);
     --card-borders: 1px solid rgba(255, 255, 255, 0.15);
@@ -12,7 +12,7 @@
 }
 .body.light {
     --primary-text: black;
-    --bg: white;
+    --bg: rgb(235, 235, 235);
     --card-borders: 1px solid rgba(0, 0, 0, 0.1);
     --card-ss-bg: rgba(130, 130, 130, 0.078);
     --card-wrap-bg: rgba(0, 0, 0, 0.2);
@@ -70,15 +70,15 @@ h1 {
     opacity: 0.8;
   }
 .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.star:nth-child(2) { top: 30%; left: 50%; animation-delay: 0.5s; }
-.star:nth-child(3) { top: 50%; left: 70%; animation-delay: 1s; }
-.star:nth-child(4) { top: 80%; left: 30%; animation-delay: 1.5s; }
-.star:nth-child(5) { top: 90%; left: 60%; animation-delay: 2s; }
-.star:nth-child(6) { top: 20%; left: 80%; animation-delay: 2.5s; }
-.star:nth-child(7) { top: 40%; left: 10%; animation-delay: 3s; }
-.star:nth-child(8) { top: 70%; left: 40%; animation-delay: 3.5s; }
-.star:nth-child(9) { top: 10%; left: 90%; animation-delay: 4s; }
-.star:nth-child(10) { top: 60%; left: 5%; animation-delay: 4.5s; }
+.star:nth-child(2) { top: 30%; left: 50%; animation-delay: 1s; }
+.star:nth-child(3) { top: 50%; left: 70%; animation-delay: 2s; }
+.star:nth-child(4) { top: 80%; left: 30%; animation-delay: 3.5s; }
+.star:nth-child(5) { top: 90%; left: 60%; animation-delay: 4s; }
+.star:nth-child(6) { top: 20%; left: 80%; animation-delay: 5s; }
+.star:nth-child(7) { top: 40%; left: 10%; animation-delay: 6.5s; }
+.star:nth-child(8) { top: 70%; left: 40%; animation-delay: 7s; }
+.star:nth-child(9) { top: 10%; left: 90%; animation-delay: 8s; }
+.star:nth-child(10) { top: 60%; left: 5%; animation-delay: 9.5s; }
 
 
 /* Header */
@@ -442,7 +442,9 @@ h1 {
     opacity: 1;
     transition: .2s;
 }
-
+.carousel-wrap {
+    position: relative;
+}
 .carousel-container {
     display: flex;
     align-self: center;
@@ -460,7 +462,7 @@ h1 {
     align-self: center;
     padding: 0;
     display: flex;
-    transition: .5s ease-in-out;
+    transition: .4s ease-in-out;
     z-index: 1;
     
 }
@@ -480,12 +482,12 @@ h1 {
     height: 40px;
 }
 .carousel-btn-next {
-    top: 25%;
-    right: 20px;
+    top: 40%;
+    right: -10px;
 }
 .carousel-btn-prev {
-    top: 25%;
-    left: 20px;
+    top: 40%;
+    left: -10px;
 }
 .carousel img {
     border-radius: 5px;
@@ -512,21 +514,24 @@ h1 {
     text-decoration: none;
     padding: 7px;
     border-radius: 5px;
-    border: 2px solid var(--primary-text);
+    border: .5px solid var(--primary-text);
     color: var(--primary-text);
     font-weight: 500;
 }
 .modal-live-link {
     text-decoration: none;
-    border: 2px solid rgb(0, 136, 255);
+    background: rgb(0, 136, 255);
     padding: 7px;
     border-radius: 5px;
-    color: rgb(0, 136, 255);
+    color: white;
     font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 .null-link {
     border: 1px solid var(--secondary-text);
     color: var(--secondary-text);
+    background: none;
     pointer-events: none;
 }
 
@@ -717,8 +722,23 @@ footer {
     .modal {
         width: 90%;
     }
+    .carousel, .carousel-container {
+        width: 350px;
+    }
 }
 @media (max-width: 600px) {
+    .carousel, .carousel-container {
+        width: 300px;
+    }
+    .carousel-btn-next img, .carousel-btn-prev img {
+        height: 30px
+    }
+    .carousel-btn-next {
+        right: -20px;
+    }
+    .carousel-btn-prev {
+        left: -20px;
+    }
     .profile {
         width: 100%;
     }
@@ -772,6 +792,18 @@ footer {
 }
 
 @media (max-width: 450px) {
+    .carousel-container, .carousel {
+        width: 250px;
+    }
+    .carousel-btn-next img, .carousel-btn-prev img {
+        height: 20px;
+    }
+    .carousel-btn-next {
+        right: -35px;
+    }
+    .carousel-btn-prev {
+        left: -35px;
+    }
     .status, .location-tag {
         font-weight: bold;
         font-size: .9em;
@@ -795,4 +827,18 @@ footer {
         flex-direction: column;
         padding-left: 50px;
     }
+    .modal-header h2 {
+        font-size: 1em;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+    .modal-wrap {
+        align-items: first baseline;
+        padding-top: 25px;
+    }
+
+    .modal-gh-link, .modal-live-link {
+        padding: 1.25vw;
+        font-size: .8em;    }
+    
 }
