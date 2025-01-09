@@ -21,7 +21,7 @@ export const projects = [
     },
     {
         id: 1,
-        projectName: "Lift-4-Dummies",
+        projectName: "Lifting-4-Dummies",
         stack: ["HTML", "CSS", "JavaScript"],
         extStack: null,
         cardDesc: "Guide for weight lifting",
@@ -44,6 +44,7 @@ export const projects = [
         liveStatus: true,
         imageURL: "./Assets/projects/Tasker3.png",
         extraIMG: ["./Assets/projects/Tasker3.png", "./Assets/projects/Tasker2.png", "./Assets/projects/Tasker1.png"],
+        extraInfo: "Tasker was purely an experiment project that I created to test out the capacities of the @dnd-kit library. Seeing as how the most prevalent use of drag-and-drop interactions take place on task managers, calendars, and planners, I wanted to implement it myself. As a pure client-side application, Tasker uses local storage for persistent data across sessions.",
         liveLink: "https://choijake0207.github.io/Tasker/",
         gitLink: "https://github.com/choijake0207/Tasker",
 
