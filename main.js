@@ -119,7 +119,7 @@ body.appendChild(modalWrap)
 
 function populateModal(id) {
     modal.innerHTML = ``
-
+    modal.className = "modal"
     const closeModalBTN = document.createElement("button")
     closeModalBTN.classList.add("modal-close-btn")
     closeModalBTN.innerHTML = `<img src="./Assets/icons/x-circle.svg"/>`
