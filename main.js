@@ -116,10 +116,8 @@ body.appendChild(modalWrap)
 
 
 
-
 function populateModal(id) {
     modal.innerHTML = ``
-    modal.className = "modal"
     const closeModalBTN = document.createElement("button")
     closeModalBTN.classList.add("modal-close-btn")
     closeModalBTN.innerHTML = `<img src="./Assets/icons/x-circle.svg"/>`
@@ -210,6 +208,7 @@ function toggleModal(id) {
     } else {
         body.classList.remove("no-scroll")
         modalWrap.classList.add("mw-hidden")
+        modal.className="modal"
     }
 }
 
