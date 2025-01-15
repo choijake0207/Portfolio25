@@ -127,7 +127,7 @@ function populateModal(id) {
     modal.appendChild(closeModalBTN)
 
     const project = projects[id]
-
+    modal.classList.add(project.projectName)
     const carouselWrap = document.createElement("div")
     carouselWrap.classList.add("carousel-wrap")
     const carouselContainer = document.createElement("div")
