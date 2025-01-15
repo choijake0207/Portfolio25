@@ -466,6 +466,9 @@ h1 {
     z-index: 1;
     
 }
+.modal.Echo .carousel-btn-next, .modal.Echo .carousel-btn-prev {
+    display: none;
+}
 .carousel-btn-next, .carousel-btn-prev {
     position: absolute;
     z-index: 1000;
