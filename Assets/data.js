@@ -15,7 +15,7 @@ export const projects = [
         liveStatus: false,
         imageURL: "./Assets/EchoDemo.png",
         extraIMG: ["./Assets/EchoDemo.png"],
-        extraInfo: "Echo was my first attempt at a full-stack project and was by far the most educational project. It was a jump into the deep end and posed many challenges I had no experience with. But, in retrospect, it was the perfect project to help me see what I didn't know. I had never used JSON web tokens, large-scale states, or even tried to set up a back-end with databases and route handling. However, through trial and error, online resources, and lots of refractoring, I was able to gain experience with new tools and frameworks.",
+        extraInfo: "Echo was my first attempt at a full-stack project. It was a jump into the deep end and posed many challenges I had no experience with. But, in retrospect, it was the perfect project to help me see what I didn't know. I had never used JSON web tokens, large-scale states, or even tried to set up a back-end with databases and route handling. However, through trial and error, online resources, and lots of refractoring, I was able to gain experience with new tools and frameworks.",
         liveLink: null,
         gitLink: "https://github.com/choijake0207/EchoV1",
     },
