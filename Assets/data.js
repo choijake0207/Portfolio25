@@ -14,7 +14,7 @@ export const projects = [
         extSummary: "Echo",
         liveStatus: false,
         imageURL: "./Assets/EchoDemo.png",
-        extraIMG: ["1", "2", "3"],
+        extraIMG: ["./Assets/EchoDemo.png"],
         extraInfo: "Echo was my first attempt at a full-stack project and was by far the most educational project. It was a jump into the deep end and posed many challenges I had no experience with. But, in retrospect, it was the perfect project to help me see what I didn't know. I had never used JSON web tokens, large-scale states, or even tried to set up a back-end with databases and route handling. However, through trial and error, online resources, and lots of refractoring, I was able to gain experience with new tools and frameworks.",
         liveLink: null,
         gitLink: "https://github.com/choijake0207/EchoV1",
@@ -56,6 +56,7 @@ export const projects = [
         extStack: ["Rest API"],
         cardDesc: "Habit management app",
         summary: "Full-stack habit management platform allowing users to create, pause, and reset habits and duration-based goals. Users are able to view all habit data including number of resets, number of completed goals, and more.",
+        extraInfo: "Habit is my second full-stack project but in this instace, I wanted to try to create something that revolved around a lot of data interaction. Habit's features such as starting, resetting, and cancelling duration based goals were a good place to practice such interactions. Currently, this project is being redone in TypeScript!",
         liveStatus: false,
         imageURL: "./Assets/projects/Habit1.png",
         extraIMG: ["./Assets/projects/Habit1.png", "./Assets/projects/Habit2.png", "./Assets/projects/Habit3.png"],
@@ -135,6 +136,13 @@ export const skills = [
         name: "MySQL",
         logo: "./Assets/skills/MySQLVector.svg",
         type: "tool",
+        use: "moderate"
+    },
+    {
+        id: 10,
+        name: "TypeScript",
+        logo: "./Assets/skills/TypeScriptVector.png",
+        type: "lang",
         use: "moderate"
     }
 
