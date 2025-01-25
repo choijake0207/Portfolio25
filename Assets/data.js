@@ -28,7 +28,7 @@ export const projects = [
         summary: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
         liveStatus: true,
         imageURL: "./Assets/projects/Lift1.png",
-        extraIMG: ["./Assets/projects/Lift1.png","./Assets/projects/Lift1.png", "./Assets/projects/Lift2.png"],
+        extraIMG: ["./Assets/projects/Lift1.png","./Assets/projects/Lift2.png", "./Assets/projects/Lift3.png"],
         extraInfo: "Lifting-4-Dummies was solely just a passion project and an attempt to add fun interactivity to a purely client-side app. The clickable SVG paths were made via InkScape. I initially intended to use APIs for data fetching but couldn't find a reliable one and alternatively used a JSON datasheet created by GitHub user @OllieJennings.",
         liveLink: "https://choijake0207.github.io/Fit4Dummies/",
         gitLink: "https://github.com/choijake0207/Fit4Dummies"
@@ -144,6 +144,27 @@ export const skills = [
         logo: "./Assets/skills/TypeScriptVector.png",
         type: "lang",
         use: "moderate"
+    },
+    {
+        id: 11,
+        name: "Vitest",
+        logo: "./Assets/skills/Vitest.webp",
+        type: "tool",
+        use: "moderate"
+    },
+    {
+        id: 12,
+        name: "Next.js",
+        logo: "./Assets/skills/next-js.svg",
+        type:"fwlib",
+        use: "least"
+    },
+    {
+        id: 13,
+        name: "Insomnia",
+        logo: "./Assets/skills/insomnia.svg",
+        type: "tool",
+        use: "most"
     }
 
 
