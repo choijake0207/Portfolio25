@@ -4,14 +4,25 @@
 export const projects = [
     {
         id: 0,
+        projectName: "Forward",
+        stack: ["Next.js", "MYSQL", "CSS"],
+        extStack: ["JWT", "Chart.js", "Prisma"],
+        cardDesc: "Habit Tracker",
+        summary: "Habit tracking platform with customizable check-in frequency and user-friendly analytics",
+        liveStatus: true,
+        imageURL: "./Assets/projects/forward1.png",
+        extraIMG: ["./Assets/projects/forward1.png", "./Assets/projects/forward2.png", "./Assets/projects/forward3.png"],
+        extraInfo: "Forward is a revision of a previous habit tracker I had built which was streak-based. I wanted to try a new version with a little more data interaction and complexity and decided to create a check-in based platform. This was definitely a challenge as it required me to build data processing layers to properly render grids and graph UIs. Further, it allowed me to experiment with Next.js!",
+        liveLink: "https://forward-self.vercel.app/",
+        gitLink: "https://github.com/choijake0207/forwards"
+    },
+    {
+        id: 1,
         projectName: "Echo",
         stack: ["React.js", "Express.js", "Node.js", "MySQL", "CSS"],
-        extStack: [
-            "Rest API", "JWT"
-        ],
+        extStack: [ "JWT", "Sequelize"],
         cardDesc: "Social media app",
         summary: "Full-stack social media application where users are able to post, like, comment on, and save media",
-        extSummary: "Echo",
         liveStatus: false,
         imageURL: "./Assets/EchoDemo.png",
         extraIMG: ["./Assets/EchoDemo.png"],
@@ -20,7 +31,7 @@ export const projects = [
         gitLink: "https://github.com/choijake0207/EchoV1",
     },
     {
-        id: 1,
+        id: 2,
         projectName: "Lifting-4-Dummies",
         stack: ["HTML", "CSS", "JavaScript"],
         extStack: null,
@@ -35,7 +46,7 @@ export const projects = [
     },
     
     {
-        id: 2,
+        id: 3,
         projectName: "Tasker",
         stack: ["HTML", "CSS", "JavaScript"],
         extStack: ["@dnd-kit"],
@@ -49,20 +60,7 @@ export const projects = [
         gitLink: "https://github.com/choijake0207/Tasker",
 
     },
-    {
-        id: 3,
-        projectName: "Habit.io",
-        stack: ["React.js", "Express.js", "Node.js", "MySQL", "CSS"],
-        extStack: ["Rest API"],
-        cardDesc: "Habit management app",
-        summary: "Full-stack habit management platform allowing users to create, pause, and reset habits and duration-based goals. Users are able to view all habit data including number of resets, number of completed goals, and more.",
-        extraInfo: "Habit is my second full-stack project but in this instace, I wanted to try to create something that revolved around a lot of data interaction. Habit's features such as starting, resetting, and cancelling duration based goals were a good place to practice such interactions. Currently, this project is being redone in TypeScript!",
-        liveStatus: false,
-        imageURL: "./Assets/projects/Habit1.png",
-        extraIMG: ["./Assets/projects/Habit1.png", "./Assets/projects/Habit2.png", "./Assets/projects/Habit3.png"],
-        liveLink: null,
-        gitLink: "https://github.com/choijake0207/Habit.io"
-    }
+   
    
 ]
 
@@ -101,70 +99,71 @@ export const skills = [
         name: "Express.js",
         logo: "./Assets/skills/ExpressVector.svg",
         type: "fwlib",
-        use: "moderate"
+        use: "most"
     },
     {
         id: 5,
         name: "Node.js",
         logo: "./Assets/skills/NodeVector.svg",
         type: "fwlib",
-        use: "moderate"
+        use: "most"
     },
     {
         id: 6,
-        name: "Sequelize",
-        logo: "./Assets/skills/SequelizeVector.svg",
-        type: "fwlib",
-        use: "moderate"
-    },
-    {
-        id: 7,
-        name: "Jest",
-        logo: "./Assets/skills/JestVector.svg",
-        type: "fwlib",
-        use: "least"
-    },
-    {
-        id: 8,
         name: "Git",
         logo: "./Assets/skills/GitVector.svg",
         type: "tool",
         use: "most"
     },
     {
-        id: 9,
+        id: 7,
         name: "MySQL",
         logo: "./Assets/skills/MySQLVector.svg",
         type: "tool",
-        use: "moderate"
+        use: "most"
     },
     {
-        id: 10,
+        id: 8,
         name: "TypeScript",
         logo: "./Assets/skills/TypeScriptVector.png",
         type: "lang",
         use: "moderate"
     },
     {
-        id: 11,
+        id: 9,
+        name: "Next.js",
+        logo: "./Assets/skills/next-js.svg",
+        type:"fwlib",
+        use: "most"
+    },
+    {
+        id: 10,
         name: "Vitest",
         logo: "./Assets/skills/Vitest.webp",
         type: "tool",
         use: "moderate"
     },
     {
+        id: 11,
+        name: "Sequelize",
+        logo: "./Assets/skills/SequelizeVector.svg",
+        type: "fwlib",
+        use: "moderate"
+    },
+  
+    {
         id: 12,
-        name: "Next.js",
-        logo: "./Assets/skills/next-js.svg",
-        type:"fwlib",
+        name: "Insomnia",
+        logo: "./Assets/skills/insomnia.svg",
+        type: "tool",
         use: "least"
     },
     {
         id: 13,
-        name: "Insomnia",
-        logo: "./Assets/skills/insomnia.svg",
-        type: "tool",
-        use: "most"
+        name: "Prisma",
+        logo: "./Assets/skills/prisma-logo.svg",
+        type: "fwlib",
+        use: "moderate"
     }
 
 
