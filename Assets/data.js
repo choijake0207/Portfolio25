@@ -4,12 +4,20 @@
 export const projects = [
     {
         id: 0,
+        projectName: "OpenMat",
+        stack: ["React.js", "Node.js", "Express.js", "MongoDB", "GraphQL", "react-leaflet"],
+        cardDesc: "A multi-sided platform for helping jiu-jitsu practioners find training places and partners outside the gym",
+        liveStatus: false,
+        imageURL: "./Assets/projects/wrestling.png"
+    },
+
+    {
+        id: 1,
         projectName: "Forward",
-        stack: ["Next.js", "MYSQL", "CSS"],
-        extStack: ["JWT", "Chart.js", "Prisma"],
-        cardDesc: "Habit Tracker",
-        summary: "Habit tracking platform with customizable check-in frequency and user-friendly analytics",
+        stack: ["Next.js", "MySQL", "CSS", "JWT", "Chart.js", "Prisma"],
+        cardDesc: "A full-stack habit manager with check-in based progress tracking. Features include real-time graph and statistical analytics and adjustable calendar views",
         liveStatus: true,
+        mobileIMG: "./Assets/projects/forwardMobile.png",
         imageURL: "./Assets/projects/forward1.png",
         extraIMG: ["./Assets/projects/forward1.png", "./Assets/projects/forward2.png", "./Assets/projects/forward3.png"],
         extraInfo: "Forward is a revision of a previous habit tracker I had built which was streak-based. I wanted to try a new version with a little more data interaction and complexity and decided to create a check-in based platform. This was definitely a challenge as it required me to build data processing layers to properly render grids and graph UIs. Further, it allowed me to experiment with Next.js!",
@@ -17,25 +25,25 @@ export const projects = [
         gitLink: "https://github.com/choijake0207/forwards"
     },
     {
-        id: 1,
-        projectName: "Echo",
-        stack: ["React.js", "Express.js", "Node.js", "MySQL", "CSS"],
-        extStack: [ "JWT", "Sequelize"],
-        cardDesc: "Social media app",
-        summary: "Full-stack social media application where users are able to post, like, comment on, and save media",
+        id: 2,
+        projectName: "Morph",
+        stack: ["CSS"],
+        extStack: null,
+        cardDesc: "A collection of interactive components rendered in neumorphic, skeumorphic, and more styles",
+        summary: null,
         liveStatus: false,
-        imageURL: "./Assets/EchoDemo.png",
-        extraIMG: ["./Assets/EchoDemo.png"],
-        extraInfo: "Echo was my first attempt at a full-stack project. It was a jump into the deep end and posed many challenges I had no experience with. But, in retrospect, it was the perfect project to help me see what I didn't know. I had never used JSON web tokens, large-scale states, or even tried to set up a back-end with databases and route handling. However, through trial and error, online resources, and lots of refractoring, I was able to gain experience with new tools and frameworks.",
+        imageURL: "./Assets/projects/morph.png",
+        extraIMG: null,
+        extraInfo: null,
         liveLink: null,
-        gitLink: "https://github.com/choijake0207/EchoV1",
+        gitLink: "https://github.com/choijake0207/Morph",
     },
     {
-        id: 2,
+        id: 3,
         projectName: "Lifting-4-Dummies",
         stack: ["HTML", "CSS", "JavaScript"],
         extStack: null,
-        cardDesc: "Guide for weight lifting",
+        cardDesc: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
         summary: "A client-side project designed to allow users to learn about fitness techniques in an interactive method through the use of clickable SVGs.",
         liveStatus: true,
         imageURL: "./Assets/projects/Lift1.png",
@@ -44,13 +52,11 @@ export const projects = [
         liveLink: "https://choijake0207.github.io/Fit4Dummies/",
         gitLink: "https://github.com/choijake0207/Fit4Dummies"
     },
-    
     {
-        id: 3,
+        id: 4,
         projectName: "Tasker",
-        stack: ["HTML", "CSS", "JavaScript"],
-        extStack: ["@dnd-kit"],
-        cardDesc: "Personal kanban board",
+        stack: ["HTML", "CSS", "JavaScript", "@dnd-kit"],
+        cardDesc: "A client-side personal KanBan board allowing users to create boards, customize columns, and drag-drop items.",
         summary: "A client-side personal KanBan board allowing users to create boards, customize columns, and drag-drop items.",
         liveStatus: true,
         imageURL: "./Assets/projects/Tasker3.png",
@@ -127,7 +133,7 @@ export const skills = [
         name: "TypeScript",
         logo: "./Assets/skills/TypeScriptVector.png",
         type: "lang",
-        use: "moderate"
+        use: "least"
     },
     {
         id: 9,
@@ -141,7 +147,7 @@ export const skills = [
         name: "Vitest",
         logo: "./Assets/skills/Vitest.webp",
         type: "tool",
-        use: "moderate"
+        use: "least"
     },
     {
         id: 11,
@@ -156,7 +162,7 @@ export const skills = [
         name: "Insomnia",
         logo: "./Assets/skills/insomnia.svg",
         type: "tool",
-        use: "least"
+        use: "most"
     },
     {
         id: 13,
@@ -164,7 +170,22 @@ export const skills = [
         logo: "./Assets/skills/prisma-logo.svg",
         type: "fwlib",
         use: "moderate"
+    }, 
+    {
+        id: 14,
+        name: "GraphQL",
+        logo: "./Assets/skills/graphql.svg",
+        type: "tool",
+        use: "least"
+    }, 
+    {
+        id: 15,
+        name: "MongoDB",
+        logo: "./Assets/skills/mongodb.svg",
+        type: "tool",
+        use: "least"
     }
+
 
 
 ]
