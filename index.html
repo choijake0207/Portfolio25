@@ -1,113 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body class="body">
-
-    <header class="top-bar">
-        <button class="light-dark-toggle">
-            <img class="light-dark-icon" src="./Assets/icons/sun-bold.svg">
-        </button>
-    </header>
-
-
-
-    <div class="profile">
-
-        <section class="personal-section">
-            <img class="pfp" src="./Assets/icons/selfie.png">
-            <div class="personal-info">
-                <div class="username-status">
-                    <h1 class="username">Jake Choi</h1>
-                    <div class="status">
-                        <div class="status-light"></div>
-                        <p>Available For Work</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Liter&display=swap" rel="stylesheet">
+    </head>
+    <body class="body">
+        
+        <header class="top-bar">
+            <button class="light-dark-toggle">
+                <img class="light-dark-icon" src="./Assets/icons/sun-bold.svg">
+            </button>
+        </header>
+    
+        <div class="profile">
+    
+            <section class="personal-section">
+                <img class="pfp" src="./Assets/icons/selfie.png">
+                <div class="personal-info">
+                    <div class="username-status">
+                        <h1 class="username">Jake Choi</h1>
+                        <div class="status">
+                            <div class="status-light"></div>
+                            <p>Available For Work</p>
+                        </div>
+                    </div>
+                    <div class="bio">
+                        <p>I'm a self-taught front end developer and I like to build things that provide utility</p>
+                        <div class="location-tag">
+                            <img src="./Assets/icons/map-pin.svg"> 
+                            <p>Los Angeles / NYC</p>
+                        </div>
                     </div>
                 </div>
-                <div class="bio">
-                    <p>I'm a self-taught front end developer and I like to build things</p>
-                    <p class="location-tag">
-                        <img src="./Assets/icons/map-pin.svg"> New York City, NY / Los Angeles, CA
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <menu class="link-stories">
-            <li class="link">
-                <a class="story" id="github" target="_blank" href="https://github.com/choijake0207">
-                    <img src="./Assets/icons/github-logo-fill.svg">
-                </a>
-                <p>GitHub</p>
-            </li>
-            <li class="link">
-                <a class="story" id="linkedin" target="_blank" href="https://www.linkedin.com/in/jake-choi-2b94a81ba/">
-                    <img src="./Assets/icons/linkedin-logo.svg">
-                </a>
-                <p>LinkedIn</p>
-            </li>
-            <li class="link">
-                <a class="story" id="resume" target="_blank" href="https://docs.google.com/document/d/1FgO7xYqJaDtM8Fmd5di6eYjoY7WOn0qWXkQBujA1OIs/edit?tab=t.0">
-                    <img src="./Assets/icons/file.svg">
-                </a>
-                <p>Resume</p>
-            </li>
-        </menu>
-
-        <nav class="tabs">
-            <button class="tab active-tab" id="project-tab" data-tab="PROJECTS"> 
-                <img src="./Assets/icons/grid-four.svg"> PROJECTS
-            </button>
-            <button class="tab" id="skills-tab" data-tab="SKILLS">
-                <img src="./Assets/icons/toolbox.svg"> SKILLS
-            </button>
-            <button class="tab" id="extra-tab" data-tab="INFO">
-                <img src="./Assets/icons/info.svg"> INFO
-            </button>
-        </nav>
-
-        <section class="main-content">
-            <ul class="tab-content active-page" id="PROJECTS"></ul>
-            <div class="tab-content" id="SKILLS">
+            </section>
+            
+            <section class="skills-section">
+                <p class="section-label">Tech Stack</p>
                 <div class="skills-color-bar">
                     <p class="skill-color" id="frequent">Most Used</p>
                     <p class="skill-color" id="moderate">Moderately Used</p>
                     <p class="skill-color" id="least">Least Used</p>
                 </div>
-               
-                    <p class="skill-type">Languages</p>
-                    <ul class="skill-list" id="lang"></ul>
-       
-             
-                    <p class="skill-type">Frameworks & Libraries</p>
-                    <ul class="skill-list" id="fwlib"></ul>
-    
-      
-                    <p class="skill-type">Tools</p>
-                    <ul class="skill-list" id="tool"></ul>
             
-            </div>
-            <div class="tab-content" id="INFO">
-                <h2>More About Me</h2>
+                <p class="skill-type">Languages</p>
+                <ul class="skill-list" id="lang"></ul>
+
+        
+                <p class="skill-type">Frameworks & Libraries</p>
+                <ul class="skill-list" id="fwlib"></ul>
+
+
+                <p class="skill-type">DBs & Tools</p>
+                <ul class="skill-list" id="tool"></ul>
+            
+            </section>
+
+            <section class="project-section">
+                <p class="section-label">Recent Projects</p>
+                <ul class="project-list"></ul>
+            </section>
+
+            <div class="info-section">
+                <p class="section-label">About Me</p>
                 <p class="extra-info">
                     I first got into front-end development as a junior in college. Despite majoring in business, I was drawn to the creative and complex logical aspects of building web applications. Starting off with resources such as Harvard CS50 and The Odin Project, I started my journey of becoming a developer. <br></br>Since then, I've learned about programming fundamentals, modern industry tools, best practices, and most importantly, the ability to love learning. I am now coming up on 2 years of self-learning and still enjoy every second of it. In my free time, I love watching movies, weight lifting, jiu jitsu, and trying new foods!
                 </p>
             </div>
         </section>
-
-    </div>
-    <footer>
-        <p>Contact: jake.ch0712@gmail.com</p>
-        <p>Last Updated: 12/28/24</p>
-    </footer>
-    <script type="module" src="main.js"></script>
-</body>
+    
+        </div>
+        <footer>
+            <p>Contact: jake.ch0712@gmail.com</p>
+            <p>Last Updated: 12/28/24</p>
+        </footer>
+        <script type="module" src="main.js"></script>
+    </body>
 </html>

@@ -6,7 +6,6 @@ body.classList.add(darkMode ? "dark" : "light")
 const toggleBTN = document.querySelector(".light-dark-toggle")
 const toggleIcon = document.querySelector(".light-dark-icon")
 
-
 function toggleDarkMode () {
     if (!darkMode) {
         toggleIcon.src = "./Assets/icons/moon-stars-bold.svg"
@@ -26,32 +25,31 @@ toggleBTN.addEventListener("click", () => {
 
 
 
+// // Tab Selection //
+// const tabs = document.querySelectorAll(".tab")
 
-// Tab Selection //
-const tabs = document.querySelectorAll(".tab")
+// const pages = document.querySelectorAll(".tab-content")
+// tabs.forEach(tab => {
+//     tab.addEventListener("click", () => {
 
-const pages = document.querySelectorAll(".tab-content")
-tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
+//         const tabType = tab.dataset.tab
 
-        const tabType = tab.dataset.tab
+//         pages.forEach(page => {
+//             page.classList.remove("active-page")
+//         })
 
-        pages.forEach(page => {
-            page.classList.remove("active-page")
-        })
+//         tabs.forEach(tab => {
+//             tab.classList.remove("active-tab")
+//         })
 
-        tabs.forEach(tab => {
-            tab.classList.remove("active-tab")
-        })
+//         tab.classList.add("active-tab")
 
-        tab.classList.add("active-tab")
-
-        document.getElementById(tabType).classList.add("active-page")
-    })
-})
+//         document.getElementById(tabType).classList.add("active-page")
+//     })
+// })
 
 // Projects Page
-const projectPage = document.getElementById("PROJECTS")
+const projectPage = document.querySelector(".project-list")
 for (let i = 0; i < projects.length; i++) {
     let project = projects[i]
     createProjectCard(project)
@@ -102,16 +100,13 @@ function handleCardEvent(event, hoverWrap) {
 
 // Project Modal
 
-
 const modal = document.createElement("div")
 modal.classList.add("modal")
-
 
 const modalWrap = document.createElement("div")
 modalWrap.classList.add("modal-wrap", "mw-hidden")
 modalWrap.appendChild(modal)
 body.appendChild(modalWrap)
-
 
 
 
@@ -161,7 +156,6 @@ function populateModal(id) {
         
     })
 
-
     const modalHeader = document.createElement("div")
     modalHeader.classList.add("modal-header")
     modalHeader.innerHTML = `
@@ -199,7 +193,6 @@ function populateModal(id) {
 
 
 
-
 function toggleModal(id) {
     if (modalWrap.classList.contains("mw-hidden")) {
         modalWrap.classList.remove("mw-hidden")
@@ -216,10 +209,8 @@ function toggleModal(id) {
 
 
 
-
 // Skills Section
 
-const skillsPage = document.getElementById("SKILLS")
 const langContainer = document.getElementById("lang")
 const fwlibContainer = document.getElementById("fwlib")
 const toolContainer = document.getElementById("tool")
