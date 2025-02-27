@@ -40,7 +40,7 @@ function createProjectCard(project) {
     card.classList.add("card", `${project.projectName}`)
     card.innerHTML = ` 
         <div class="ss-wrap">
-            ${project.id === 0 ? `<p>On Its Way</p>` : ""}
+            ${project.id === 0 ? `<p>COMING SOON</p>` : ""}
             <img class="screenshot" src=${project.imageURL}></img>
         </div>
         <div class="card-body">
