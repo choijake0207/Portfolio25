@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 html {
-    scroll-behavior: smooth;
+    background-color: rgb(12, 13, 13);
 }
 body {
     margin: 0;
@@ -23,6 +23,7 @@ body {
     transition: .4s ease;
     color: var(--primary-text);
     background: var(--bg);
+   
 }
 .body::-webkit-scrollbar {
     display: none;
