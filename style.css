@@ -162,6 +162,27 @@ h1, p {
 
 
 /* Project Page */
+.project-section {
+    display: flex;
+    flex-direction: column;
+}
+.more-btn {
+    border: 1px solid var(--subtle-border);
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: none;
+    color: var(--secondary-text);
+    font-size: 12px;
+    transition: .2s;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+}
+.more-btn:hover {
+    background: var(--subtle-border)
+}
 .project-list {
     padding: 0;
     display: flex;
