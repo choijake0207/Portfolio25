@@ -72,13 +72,7 @@ export const projects = [
 
 export const skills = [
 
-    {
-        id: 0,
-        name: "React.js",
-        logo: "./Assets/skills/ReactVector.svg",
-        type: "fwlib",
-        use: "most"
-    },
+  
     {
         id: 1,
         name: "HTML",
@@ -102,84 +96,95 @@ export const skills = [
     },
     {
         id: 4,
-        name: "Express.js",
-        logo: "./Assets/skills/ExpressVector.svg",
-        type: "fwlib",
-        use: "most"
-    },
-    {
-        id: 5,
-        name: "Node.js",
-        logo: "./Assets/skills/NodeVector.svg",
-        type: "fwlib",
-        use: "most"
-    },
-    {
-        id: 6,
-        name: "Git",
-        logo: "./Assets/skills/GitVector.svg",
-        type: "tool",
-        use: "most"
-    },
-    {
-        id: 7,
-        name: "MySQL",
-        logo: "./Assets/skills/MySQLVector.svg",
-        type: "tool",
-        use: "most"
-    },
-    {
-        id: 8,
         name: "TypeScript",
         logo: "./Assets/skills/TypeScriptVector.png",
         type: "lang",
         use: "least"
     },
     {
-        id: 9,
+        id: 5,
+        name: "React.js",
+        logo: "./Assets/skills/ReactVector.svg",
+        type: "fwlib",
+        use: "most"
+    },
+    {
+        id: 6,
+        name: "Express.js",
+        logo: "./Assets/skills/ExpressVector.svg",
+        type: "fwlib",
+        use: "most"
+    },
+    {
+        id: 7,
+        name: "Node.js",
+        logo: "./Assets/skills/NodeVector.svg",
+        type: "fwlib",
+        use: "most"
+    },
+    {
+        id: 8,
         name: "Next.js",
         logo: "./Assets/skills/next-js.svg",
         type:"fwlib",
         use: "most"
     },
     {
-        id: 10,
-        name: "Vitest",
-        logo: "./Assets/skills/Vitest.webp",
-        type: "tool",
-        use: "least"
-    },
-    {
-        id: 11,
+        id: 9,
         name: "Sequelize",
         logo: "./Assets/skills/SequelizeVector.svg",
         type: "fwlib",
         use: "moderate"
     },
-  
     {
-        id: 12,
-        name: "Insomnia",
-        logo: "./Assets/skills/insomnia.svg",
-        type: "tool",
-        use: "most"
-    },
-    {
-        id: 13,
+        id: 10,
         name: "Prisma",
         logo: "./Assets/skills/prisma-logo.svg",
         type: "fwlib",
         use: "moderate"
     }, 
     {
+        id: 11,
+        name: "Git",
+        logo: "./Assets/skills/GitVector.svg",
+        type: "tool",
+        use: "most"
+    },
+    {
+        id: 12,
+        name: "MySQL",
+        logo: "./Assets/skills/MySQLVector.svg",
+        type: "tool",
+        use: "most"
+    },
+ 
+
+    {
+        id: 13,
+        name: "Vitest",
+        logo: "./Assets/skills/Vitest.webp",
+        type: "tool",
+        use: "least"
+    },
+   
+  
+    {
         id: 14,
+        name: "Insomnia",
+        logo: "./Assets/skills/insomnia.svg",
+        type: "tool",
+        use: "most"
+    },
+
+    {
+        id: 15,
         name: "GraphQL",
         logo: "./Assets/skills/graphql.svg",
         type: "tool",
         use: "least"
     }, 
     {
-        id: 15,
+        id: 16,
         name: "MongoDB",
         logo: "./Assets/skills/mongodb.svg",
         type: "tool",
