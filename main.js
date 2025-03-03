@@ -24,7 +24,18 @@ const body = document.querySelector(".body")
 //     toggleDarkMode()
 // })
 
-
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show")
+            } 
+        })
+    })
+    const elements = document.querySelectorAll(".intersection-hidden")
+    elements.forEach(el => observer.observe(el))
+    
+})
 
 
 
@@ -32,12 +43,12 @@ const body = document.querySelector(".body")
 const projectPage = document.querySelector(".project-list")
 for (let i = 0; i < projects.length; i++) {
     let project = projects[i]
-    createProjectCard(project)
+    createProjectCard(project, i)
 }
 
-function createProjectCard(project) {
+function createProjectCard(project, i) {
     const card = document.createElement("li")
-    card.classList.add("card", `${project.projectName}`)
+    card.classList.add("card", `${project.projectName}`, "intersection-hidden")
     card.innerHTML = ` 
         <div class="ss-wrap">
             ${project.id === 0 ? `<p>COMING SOON</p>` : ""}
