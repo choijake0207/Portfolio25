@@ -188,6 +188,7 @@ for (let i = 0; i < skills.length; i++) {
 function createSkill(skill) {
     const skillBox = document.createElement("li")
     skillBox.classList.add("skill", `${skill.name}`, `${skill.use}`)
+    skillBox.style.animationDelay = `${skill.id * 0.05}s`
     skillBox.innerHTML = `
         <img src=${skill.logo}>
         <p>${skill.name}</p>
