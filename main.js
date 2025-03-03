@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     const elements = document.querySelectorAll(".intersection-hidden")
     elements.forEach(el => observer.observe(el))
+    window.projectObserver = observer
     
 })
 
@@ -41,12 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Projects Page
 const projectPage = document.querySelector(".project-list")
-for (let i = 0; i < projects.length; i++) {
+let displayCount = 3
+for (let i = 0; i < displayCount; i++) {
     let project = projects[i]
-    createProjectCard(project, i)
+    createProjectCard(project)
 }
 
-function createProjectCard(project, i) {
+function createProjectCard(project) {
     const card = document.createElement("li")
     card.classList.add("card", `${project.projectName}`, "intersection-hidden")
     card.innerHTML = ` 
@@ -71,114 +73,29 @@ function createProjectCard(project, i) {
         </div>
     `
     projectPage.appendChild(card)
-}
-
-
-
-const modal = document.createElement("div")
-modal.classList.add("modal")
-
-const modalWrap = document.createElement("div")
-modalWrap.classList.add("modal-wrap", "mw-hidden")
-modalWrap.appendChild(modal)
-body.appendChild(modalWrap)
-
-
-
-
-function populateModal(id) {
-    modal.innerHTML = ``
-    const closeModalBTN = document.createElement("button")
-    closeModalBTN.classList.add("modal-close-btn")
-    closeModalBTN.innerHTML = `<img src="./Assets/icons/x-circle.svg"/>`
-    closeModalBTN.addEventListener("click", toggleModal)
-    modal.appendChild(closeModalBTN)
-
-    const project = projects[id]
-    modal.classList.add(project.projectName)
-    const carouselWrap = document.createElement("div")
-    carouselWrap.classList.add("carousel-wrap")
-    const carouselContainer = document.createElement("div")
-    carouselContainer.classList.add("carousel-container")
-    const prevBtn = document.createElement("button")
-    prevBtn.innerHTML = `<img src="./Assets/icons/prev.svg"/>`
-    prevBtn.classList.add("carousel-btn-prev")
-    const nextBtn = document.createElement("button")
-    nextBtn.innerHTML = `<img src="./Assets/icons/next.svg"/>`
-    nextBtn.classList.add("carousel-btn-next")
-    const carousel = document.createElement("ul")
-    carousel.classList.add("carousel")
-    carouselWrap.append(prevBtn, carouselContainer, nextBtn)
-    carouselContainer.appendChild(carousel)
-    
-
-    for (let i = 0; i < project.extraIMG.length; i++) {
-        const source = project.extraIMG[i]
-        const img = document.createElement("img")
-        img.classList.add("carousel-image")
-        img.src = source
-        carousel.appendChild(img)
-    }
-    modal.appendChild(carouselWrap)
-
-    let currentImg = 0;
-    let images = carousel.querySelectorAll(".carousel-image")
-    nextBtn.addEventListener("click", () => {
-        currentImg = (currentImg + 1) % 3
-            const width = images[0].clientWidth
-            carousel.style.transform = `translateX(-${currentImg * width}px)`
-
-        
-    })
-
-    const modalHeader = document.createElement("div")
-    modalHeader.classList.add("modal-header")
-    modalHeader.innerHTML = `
-        <h2>${project.projectName}</h2>
-        <div class="links-container">
-            <a class="modal-gh-link" href="${project.gitLink}" target="_blank">View Code</a>
-            <a class="modal-live-link ${project.liveLink === null ? "null-link" : ""}" target="_blank" href="${project.liveLink}">${project.liveLink === null ? "Coming Soon" : "View Demo"}</a>
-        </div>
-    `
-    modal.appendChild(modalHeader)
-
-    const techList = document.createElement("ul")
-    techList.classList.add("tech-list")
-    for(let j = 0; j < project.stack.length; j++) {
-        const techItem = document.createElement("li")
-        techItem.textContent = project.stack[j]
-        techItem.classList.add("tech-item")
-        techList.appendChild(techItem)
-    }
-    if (project.extStack) {
-        for (let j = 0;  j < project.extStack.length; j++) {
-            const extItem = document.createElement("li")
-            extItem.textContent = project.extStack[j]
-            extItem.classList.add("ext-item")
-            techList.appendChild(extItem)
-        }
-    }
-    modal.appendChild(techList)
-
-    const extraInfo = document.createElement("p")
-    extraInfo.classList.add("modal-extra-info")
-    extraInfo.textContent = project.extraInfo
-    modal.appendChild(extraInfo)
-}
-
-
-
-function toggleModal(id) {
-    if (modalWrap.classList.contains("mw-hidden")) {
-        modalWrap.classList.remove("mw-hidden")
-        body.classList.add("no-scroll")
-        populateModal(id)
-    } else {
-        body.classList.remove("no-scroll")
-        modalWrap.classList.add("mw-hidden")
-        modal.className="modal"
+    if (window.projectObserver) {
+        window.projectObserver.observe(card)
     }
 }
+
+const moreBTN = document.querySelector(".more-btn")
+moreBTN.addEventListener("click", () => {
+    for (let i = displayCount; i < projects.length; i++) {
+        let project = projects[i]
+        createProjectCard(project)
+    }
+    displayCount = projects.length
+    if (displayCount >= projects.length) {
+        moreBTN.style.display = "none"
+    }
+})
+
+
+
+
+
+
+
 
 
 
