@@ -18,7 +18,7 @@ export const projects = [
         cardDesc: "A full-stack habit manager with check-in based progress tracking. Features include real-time graph and statistical analytics and adjustable calendar views",
         liveStatus: true,
         mobileIMG: "./Assets/projects/forwardMobile.png",
-        imageURL: "./Assets/projects/forward1.png",
+        imageURL: "./Assets/projects/Forward.png",
         extraIMG: ["./Assets/projects/forward1.png", "./Assets/projects/forward2.png", "./Assets/projects/forward3.png"],
         extraInfo: "Forward is a revision of a previous habit tracker I had built which was streak-based. I wanted to try a new version with a little more data interaction and complexity and decided to create a check-in based platform. This was definitely a challenge as it required me to build data processing layers to properly render grids and graph UIs. Further, it allowed me to experiment with Next.js!",
         liveLink: "https://forward-self.vercel.app/",
