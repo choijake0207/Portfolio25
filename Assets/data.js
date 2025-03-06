@@ -145,13 +145,20 @@ export const skills = [
     }, 
     {
         id: 11,
+        name: "Socket.io",
+        logo: "./Assets/skills/SocketLogo.png",
+        type: "fwlib",
+        use: "moderate"
+    },
+    {
+        id: 12,
         name: "Git",
         logo: "./Assets/skills/GitVector.svg",
         type: "tool",
         use: "most"
     },
     {
-        id: 12,
+        id: 13,
         name: "MySQL",
         logo: "./Assets/skills/MySQLVector.svg",
         type: "tool",
@@ -160,7 +167,7 @@ export const skills = [
  
 
     {
-        id: 13,
+        id: 14,
         name: "Vitest",
         logo: "./Assets/skills/Vitest.webp",
         type: "tool",
@@ -169,7 +176,7 @@ export const skills = [
    
   
     {
-        id: 14,
+        id: 15,
         name: "Insomnia",
         logo: "./Assets/skills/insomnia.svg",
         type: "tool",
@@ -177,14 +184,14 @@ export const skills = [
     },
 
     {
-        id: 15,
+        id: 16,
         name: "GraphQL",
         logo: "./Assets/skills/graphql.svg",
         type: "tool",
         use: "least"
     }, 
     {
-        id: 16,
+        id: 17,
         name: "MongoDB",
         logo: "./Assets/skills/mongodb.svg",
         type: "tool",
