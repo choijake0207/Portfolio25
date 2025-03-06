@@ -5,7 +5,7 @@ export const projects = [
     {
         id: 0,
         projectName: "OpenMat",
-        stack: ["React.js", "Node.js", "Express.js", "MongoDB", "GraphQL", "react-leaflet"],
+        stack: ["React.js", "Node.js", "Express.js", "CSS", "MySQL", "Sequelize", "Socket.io", "react-leaflet"],
         cardDesc: "A multi-sided platform for helping jiu-jitsu practioners find training places and partners outside the gym",
         liveStatus: false,
         imageURL: "./Assets/projects/wrestling.png"
