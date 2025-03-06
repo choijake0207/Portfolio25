@@ -373,12 +373,12 @@ h1, p {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 3px;
     margin: 0;
 }
 .skill img {
     aspect-ratio: auto;
-    height: 25px;
+    height: 20px;
     transition: .2s ease;
 }
 .skill {
@@ -387,10 +387,10 @@ h1, p {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--subtle-border);
-    border-radius: 7px;
+    border-radius: 5px;
     gap: 5px;
-    width: 80px;
-    aspect-ratio:  1 / .8;
+    width: 75px;
+    aspect-ratio:  1 / .9;
     transition: .2s ease;
     animation: skill-rise 1s ease forwards;
     opacity: 0;
