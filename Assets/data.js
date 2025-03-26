@@ -103,62 +103,70 @@ export const skills = [
     },
     {
         id: 5,
+        name: "PHP",
+        logo: "./Assets/skills/php.svg",
+        type: "lang",
+        use: "least"
+    },
+    {
+        id: 6,
         name: "React.js",
         logo: "./Assets/skills/ReactVector.svg",
         type: "fwlib",
         use: "most"
     },
+    
     {
-        id: 6,
+        id: 7,
         name: "Express.js",
         logo: "./Assets/skills/ExpressVector.svg",
         type: "fwlib",
         use: "most"
     },
     {
-        id: 7,
+        id: 8,
         name: "Node.js",
         logo: "./Assets/skills/NodeVector.svg",
         type: "fwlib",
         use: "most"
     },
     {
-        id: 8,
+        id: 9,
         name: "Next.js",
         logo: "./Assets/skills/next-js.svg",
         type:"fwlib",
         use: "most"
     },
     {
-        id: 9,
+        id: 10,
         name: "Sequelize",
         logo: "./Assets/skills/SequelizeVector.svg",
         type: "fwlib",
         use: "moderate"
     },
     {
-        id: 10,
+        id: 11,
         name: "Prisma",
         logo: "./Assets/skills/prisma-logo.svg",
         type: "fwlib",
         use: "moderate"
     }, 
     {
-        id: 11,
+        id: 12,
         name: "Socket.io",
         logo: "./Assets/skills/SocketLogo.png",
         type: "fwlib",
         use: "moderate"
     },
     {
-        id: 12,
+        id: 13,
         name: "Git",
         logo: "./Assets/skills/GitVector.svg",
         type: "tool",
         use: "most"
     },
     {
-        id: 13,
+        id: 14,
         name: "MySQL",
         logo: "./Assets/skills/MySQLVector.svg",
         type: "tool",
@@ -167,7 +175,7 @@ export const skills = [
  
 
     {
-        id: 14,
+        id: 15,
         name: "Vitest",
         logo: "./Assets/skills/Vitest.webp",
         type: "tool",
@@ -176,7 +184,7 @@ export const skills = [
    
   
     {
-        id: 15,
+        id: 16,
         name: "Insomnia",
         logo: "./Assets/skills/insomnia.svg",
         type: "tool",
@@ -184,16 +192,23 @@ export const skills = [
     },
 
     {
-        id: 16,
+        id: 17,
         name: "GraphQL",
         logo: "./Assets/skills/graphql.svg",
         type: "tool",
         use: "least"
     }, 
     {
-        id: 17,
+        id: 18,
         name: "MongoDB",
         logo: "./Assets/skills/mongodb.svg",
+        type: "tool",
+        use: "least"
+    }, 
+    {
+        id: 19,
+        name: "Lambda",
+        logo: "./Assets/skills/LambdaLogo.png",
         type: "tool",
         use: "least"
     }
