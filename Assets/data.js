@@ -207,8 +207,8 @@ export const skills = [
     }, 
     {
         id: 19,
-        name: "Lambda",
-        logo: "./Assets/skills/LambdaLogo.png",
+        name: "AWS",
+        logo: "./Assets/skills/AWS.png",
         type: "tool",
         use: "least"
     }
