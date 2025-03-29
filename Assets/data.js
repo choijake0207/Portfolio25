@@ -103,8 +103,8 @@ export const skills = [
     },
     {
         id: 5,
-        name: "PHP",
-        logo: "./Assets/skills/php.svg",
+        name: "C#",
+        logo: "./Assets/skills/CSharp.png",
         type: "lang",
         use: "least"
     },
