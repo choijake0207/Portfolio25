@@ -8,7 +8,8 @@ export const projects = [
         stack: ["React.js", "Node.js", "Express.js", "CSS", "MySQL", "Sequelize", "Socket.io", "react-leaflet"],
         cardDesc: "A multi-sided platform for helping jiu-jitsu practioners find training places and partners outside the gym",
         liveStatus: false,
-        imageURL: "./Assets/projects/wrestling.png"
+        imageURL: "./Assets/projects/OpenMat.png",
+        gitLink: "https://github.com/choijake0207/OpenMat"
     },
 
     {
