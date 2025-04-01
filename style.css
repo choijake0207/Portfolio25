@@ -310,7 +310,7 @@ h1, p {
     border-radius: 5px;
 }
     /* Pseudo Card Styles */
-    .card.OpenMat {
+    /* .card.OpenMat {
         height: 370px;
     }
     .card.OpenMat .ss-wrap {
@@ -318,19 +318,19 @@ h1, p {
         flex-direction: column;
         gap: 10px;  
         height: 200px;
-    }
-    .card.OpenMat .ss-wrap p {
+    } */
+    /* .card.OpenMat .ss-wrap p {
         font-size: 20px;
         color: var(--secondary-text);
     }
+    */
     .card.OpenMat .screenshot{
-        width: 20%;
-        filter: invert(.3);
-        aspect-ratio: 1/1
+        width: 70%;
+        aspect-ratio: initial;
     }
-    .card.OpenMat .card-links-container {
+    /* .card.OpenMat .card-links-container {
         display: none;
-    }
+    }  */
 
 
 /* SKILLS poage  */
@@ -350,16 +350,16 @@ h1, p {
     border-radius: 5px;
 }
 #frequent {
-    border: 1px solid rgb(0, 136, 255);
-    background: rgba(0, 136, 255, 0.1);
+    border: 1px solid rgb(98, 0, 255);
+    background: rgba(98, 0, 255, 0.1);
 }
 #moderate {
-    border: 1px solid rgb(18, 189, 18);
-    background: rgba(18, 189, 18, 0.1)
+    border: 1px solid rgb(23, 136, 223);
+    background: rgba(23, 136, 223, 0.1)
 }
 #least {
-    border: 1px solid rgb(255, 200, 0);
-    background: rgba(255, 200, 0, 0.1)
+    border: 1px solid rgb(18, 189, 18);
+    background: rgba(18, 189, 18, 0.1)
 }
 .skill-type {
     color: var(--secondary-text);
@@ -408,16 +408,16 @@ h1, p {
     transform: translateY(-3px);
 }
 .most:hover {
-    bordeR: 1px solid rgb(0, 136, 255);
+    bordeR: 1px solid rgb(98, 0, 255);
     transition: .2s;
 }
 .moderate:hover {
-    border: 1px solid rgb(18, 189, 18);
+    border: 1px solid rgb(23, 136, 223);
     transition: .2s;
 
 }
 .least:hover {
-    border: 1px solid rgb(255, 200, 0);
+    border: 1px solid rgb(18, 189, 18);
     transition: .2s;
 }
 
