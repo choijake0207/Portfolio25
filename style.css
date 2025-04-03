@@ -324,10 +324,10 @@ h1, p {
         color: var(--secondary-text);
     }
     */
-    .card.OpenMat .screenshot{
+    /* .card.OpenMat .screenshot{
         width: 70%;
         aspect-ratio: initial;
-    }
+    } */
     /* .card.OpenMat .card-links-container {
         display: none;
     }  */
