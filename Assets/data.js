@@ -104,10 +104,10 @@ export const skills = [
     },
     {
         id: 5,
-        name: "C#",
-        logo: "./Assets/skills/CSharp.png",
+        name: "SQL",
+        logo: "./Assets/skills/SQLLogo.png",
         type: "lang",
-        use: "least"
+        use: "moderate"
     },
     {
         id: 6,
